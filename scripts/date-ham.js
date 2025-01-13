@@ -1,4 +1,4 @@
-// Actualizar dinámicamente el año y la fecha de última modificación
+// Dynamically update the year and date of last modification
 window.onload = () => {
   document.getElementById("currentyear").textContent = new Date().getFullYear();
   document.getElementById(
@@ -6,7 +6,7 @@ window.onload = () => {
   ).textContent = `Last Modification: ${document.lastModified}`;
 };
 
-// Menú de navegación responsivo
+// Responsive navigation menu
 const hamburger = document.querySelector(".header__hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const mainContainer = document.querySelector(".main");
@@ -25,7 +25,7 @@ document.querySelectorAll(".nav-link").forEach((link) =>
   })
 );
 
-// Cursos y navegación
+// Courses and navigation
 const courses = [
   {
     subject: "CSE",
@@ -97,7 +97,7 @@ const courses = [
 
 const navigationList = document.querySelector(".card__navigation");
 
-// Función para mostrar títulos filtrados
+// Function to display filtered titles
 function displayCourses(filterFunction) {
   navigationList.innerHTML = "";
   courses.filter(filterFunction).forEach((course) => {
@@ -108,7 +108,7 @@ function displayCourses(filterFunction) {
   });
 }
 
-// Función para mostrar detalles de un curso con estilos
+// Function to display details of a course with styles
 function displayCourseDetails(courseNumber, withStyles = false) {
   navigationList.innerHTML = "";
   const course = courses.find((c) => c.number === courseNumber);
@@ -139,7 +139,7 @@ function displayCourseDetails(courseNumber, withStyles = false) {
   }
 }
 
-// Botones y eventos
+// Event listeners for navigation
 document
   .querySelector(".click-all")
   .addEventListener("click", () => displayCourses(() => true));

@@ -220,7 +220,8 @@ nav a:active {
     padding-bottom: .5rem;
     ;
 }
-.card__navigation-item:first-letter{
+
+.card__navigation-item:first-letter {
     text-transform: uppercase;
 }
 

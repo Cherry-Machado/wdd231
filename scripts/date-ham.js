@@ -25,7 +25,7 @@ document.querySelectorAll(".nav-link").forEach((link) =>
   })
 );
 
-// Courses and navigation array
+// Courses and navigation
 const courses = [
   {
     subject: "CSE",

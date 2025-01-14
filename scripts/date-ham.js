@@ -97,21 +97,23 @@ const courses = [
 
 const navigationList = document.querySelector(".card__navigation");
 
-// Function to display filtered titles
+// Show filtered courses and calculate credits
 function displayCourses(filterFunction) {
   navigationList.innerHTML = "";
-  totalCredits = 0;
 
-  // Filter and process courses
-  courses.filter(filterFunction).forEach((course) => {
+  const filteredCourses = courses.filter(filterFunction);
+  const totalCredits = filteredCourses.reduce(
+    (acc, course) => acc + course.credits,
+    0
+  );
+
+  filteredCourses.forEach((course) => {
     const listItem = document.createElement("li");
-    totalCredits += parseInt(course.credits);
     listItem.textContent = `${course.subject} ${course.number}: ${course.title} - ${course.credits} credits`;
     listItem.classList.add("card__navigation-item");
     navigationList.appendChild(listItem);
   });
 
-  // Create and display total credits
   const totalCreditsItem = document.createElement("li");
   totalCreditsItem.textContent = `Total Credits: ${totalCredits}`;
   totalCreditsItem.style.fontWeight = "bold";
@@ -120,7 +122,7 @@ function displayCourses(filterFunction) {
   navigationList.appendChild(totalCreditsItem);
 }
 
-// Function to display details of a course with styles
+// Displaying course details with styles
 function displayCourseDetails(courseNumber, withStyles = false) {
   navigationList.innerHTML = "";
   const course = courses.find((c) => c.number === courseNumber);
@@ -132,12 +134,11 @@ function displayCourseDetails(courseNumber, withStyles = false) {
         Array.isArray(value) ? value.join(", ") : value
       }`;
       if (withStyles) {
+        listItem.style.fontStyle = key === "completed" ? "normal" : "italic";
         if (key === "completed") {
           listItem.style.backgroundColor = "green";
           listItem.style.color = "white";
           listItem.style.fontWeight = "bold";
-        } else {
-          listItem.style.fontStyle = "italic";
         }
       }
       listItem.classList.add("card__navigation-item");
@@ -151,19 +152,23 @@ function displayCourseDetails(courseNumber, withStyles = false) {
   }
 }
 
-// Event listeners for navigation
-document
-  .querySelector(".click-all")
-  .addEventListener("click", () => displayCourses(() => true));
-document
-  .querySelector(".click-cse")
-  .addEventListener("click", () => displayCourses((c) => c.subject === "CSE"));
-document
-  .querySelector(".click-wdd")
-  .addEventListener("click", () => displayCourses((c) => c.subject === "WDD"));
+// Event listeners for course navigation
+const eventListeners = [
+  { selector: ".click-all", filter: () => true },
+  { selector: ".click-cse", filter: (c) => c.subject === "CSE" },
+  { selector: ".click-wdd", filter: (c) => c.subject === "WDD" },
+];
 
-[110, 130, 111, 210, 131, 231].forEach((num) => {
-  document.querySelector(`.click-${num}`).addEventListener("click", () => {
-    displayCourseDetails(num, [110, 130, 111, 131].includes(num));
-  });
-});
+eventListeners.forEach(({ selector, filter }) =>
+  document
+    .querySelector(selector)
+    .addEventListener("click", () => displayCourses(filter))
+);
+
+[110, 130, 111, 210, 131, 231].forEach((num) =>
+  document
+    .querySelector(`.click-${num}`)
+    .addEventListener("click", () =>
+      displayCourseDetails(num, [110, 130, 111, 131].includes(num))
+    )
+);

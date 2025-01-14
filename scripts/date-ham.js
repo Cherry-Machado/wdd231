@@ -100,12 +100,24 @@ const navigationList = document.querySelector(".card__navigation");
 // Function to display filtered titles
 function displayCourses(filterFunction) {
   navigationList.innerHTML = "";
+  totalCredits = 0;
+
+  // Filter and process courses
   courses.filter(filterFunction).forEach((course) => {
     const listItem = document.createElement("li");
-    listItem.textContent = course.title;
+    totalCredits += parseInt(course.credits);
+    listItem.textContent = `${course.subject} ${course.number}: ${course.title} - ${course.credits} credits`;
     listItem.classList.add("card__navigation-item");
     navigationList.appendChild(listItem);
   });
+
+  // Create and display total credits
+  const totalCreditsItem = document.createElement("li");
+  totalCreditsItem.textContent = `Total Credits: ${totalCredits}`;
+  totalCreditsItem.style.fontWeight = "bold";
+  totalCreditsItem.style.marginTop = "10px";
+  totalCreditsItem.style.listStyleType = "none";
+  navigationList.appendChild(totalCreditsItem);
 }
 
 // Function to display details of a course with styles

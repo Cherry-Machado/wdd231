@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    width: 90%;
+    width: 96%;
     margin: 0 auto;
 }
 
@@ -28,19 +28,11 @@ h2 {
 	padding: 0.5rem;
 }
 
-#emessage {
-	visibility: hidden;
-	margin: 1rem;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 0.5rem;
-	font-size: 0.8rem;
-	background-color: indianred;
-}
-
 nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    flex-wrap: wrap;
 	border-bottom: 1px solid #bbb;
 }
 
@@ -49,7 +41,8 @@ nav {
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-	grid-gap: 1rem;
+	grid-gap: 0rem 2rem;
+    
 }
 
 section {
@@ -58,6 +51,7 @@ section {
 	border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     background-image: linear-gradient(to top, #7a4406 0%, #86f7ee 75%);
+    box-shadow: 0 0 15px #595050;
 	color: #fbf7f7;
 	width: 100%;
 	display: flex;
@@ -78,13 +72,15 @@ section img {
 	margin-top: 1rem;
 }
 
-input,
-select,
-textarea,
 button {
 	padding: 0.5rem;
 	margin: 0.5rem;
-	border: 1px solid rgba(0,0,0,.1);
+    font-size: medium;
+    font-weight: bold;
+    border: 2px solid #7a4406;
+    border-radius: 1rem;
+    background-color: #86f7ee;
+
 }
 
 .active {
@@ -99,7 +95,7 @@ button {
 button:hover {
 	background-color: yellow;
 	color: #000;
-	border: 1px solid rgba(0,0,0,.1);
+    border: 2px dotted #7a4406;
 }
 
 .stats {

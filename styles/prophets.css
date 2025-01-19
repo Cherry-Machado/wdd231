@@ -8,6 +8,13 @@ body {
 	font-size: 18px;
 	font-family: Roboto, Helvetica, sans-serif;
 	color: #fff;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
 }
 
 h1 {
@@ -33,23 +40,23 @@ h2 {
 nav {
 	display: flex;
 	align-items: center;
-	justify-content: left;
+	justify-content: center;
 	border-bottom: 1px solid #bbb;
 }
 
 
 #cards {
-	margin-left: 1rem;
+	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
 	grid-gap: 1rem;
 }
 
 section {
-	margin: 1rem;
-	padding: 1rem;
+	margin: 1rem 0rem;
+    padding-bottom: 1.3rem;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	/*background-color: rgb(27, 11, 31, 1);*/
+    border-radius: 1rem;
     background-image: linear-gradient(to top, #7a4406 0%, #86f7ee 75%);
 	color: #fbf7f7;
 	width: 100%;

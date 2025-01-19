@@ -281,7 +281,9 @@ a {
     border: 1px solid gray;
 }
 
-
+figcaption {
+    font-size: small;
+}
 
 .card__navigation-20 {
     justify-content: center;

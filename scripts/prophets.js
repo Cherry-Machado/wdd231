@@ -52,10 +52,8 @@ async function jsonFetch(url) {
 }
 
 const displayProphets = (prophets) => {
-  //const cards = document.querySelector("div.cards");
   const cards = document.querySelector("#cards");
   cards.innerHTML = "";
-  // card build code goes here
   prophets.forEach((prophet) => {
     let numero = prophets.indexOf(prophet) + 1;
     let prefixord = "";
@@ -71,9 +69,7 @@ const displayProphets = (prophets) => {
     let num = document.createElement("p");
     let portrait = document.createElement("img");
 
-    // Build the h2 content out to show the prophet's full name
     fullName.textContent = `${prophet.name} ${prophet.lastname}`;
-    // Build the image portrait by setting all the relevant attributes
     portrait.setAttribute("src", prophet.imageurl);
     if (numero === 1) {
       prefixord = "st";

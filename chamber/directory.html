@@ -24,21 +24,56 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="styles/prophets.css" type="text/css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <script defer src="scripts/chamber.js"></script>
+    <link rel="stylesheet" href="./styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="./styles/chamber.css" type="text/css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <script defer src="./scripts/chamber.js"></script>
 </head>
 
 <body>
     <header>
         <h1>Chamber Directory Page</h1>
     </header>
-    
+    <nav>
+        <button id="myButton">&#9776;</button>
+        <ul class="breadcrumb">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Discover.html">About</a></li>
+            <li><a href="Directory.html">Services</a></li>
+            <li><a href="Join.html">Directory</a></li>
+        </ul>
+    </nav>
     <main>
-        
+        <h1>Directory</h1>
     </main>
     <footer>
-      
+        <div>
+            <h4>São Paulo Chamber of Commerce</h4>
+            <p>R. Boa Vista, 51 - Centro Histórico de São Paulo, São Paulo - SP, 17190-005</p>
+            <p>info@spchamberoc.org</p>
+            <p>Phone:+55 (11) 3180-3180</p>
+        </div>
+        <div class="footer__socialmedia">
+            <a href="https://facebook.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-facebook.svg" class="footer__icon" alt="logo facebook" loading="lazy">
+            </a>
+            <a href="https://youtube.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-youtube.svg" class="footer__icon" alt="logo youtube" loading="lazy">
+            </a>
+            <a href="https://x.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-twitter.svg" class="footer__icon" alt="logo twitter" loading="lazy">
+            </a>
+            <a href="https://instagram.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-instagram.svg" class="footer__icon" alt="logo instagram" loading="lazy">
+            </a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Cherry Machado</p>
+            <p>&copy; 2025 São Paulo Chamber of Commerce</p>
+            <p>
+            <p id="lastModified"><span id="currentyear"></span></p>
+        </div>
     </footer>
 </body>
 

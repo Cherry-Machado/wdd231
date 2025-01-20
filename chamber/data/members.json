@@ -1,0 +1,67 @@
+{
+  "companies": [
+    {
+      "name": "TechnoVision Solutions",
+      "address": "123 Silicon Valley Blvd, San Jose, CA",
+      "phone": "+1-408-555-0134",
+      "website": "https://www.technovision.com",
+      "icon": "technovision.jpg",
+      "membership_level": 3,
+      "description": "A leading provider of AI-driven software solutions."
+    },
+    {
+      "name": "GreenFuture Inc.",
+      "address": "78 Maple Leaf Rd, Toronto, ON",
+      "phone": "+1-647-555-0112",
+      "website": "https://www.greenfuture.com",
+      "icon": "greenfuture.png",
+      "membership_level": 2,
+      "description": "Sustainable energy solutions for a greener tomorrow."
+    },
+    {
+      "name": "Innovative Webworks",
+      "address": "456 Innovation Ave, Austin, TX",
+      "phone": "+1-512-555-0198",
+      "website": "https://www.innovativewebworks.com",
+      "icon": "webworks.jpeg",
+      "membership_level": 1,
+      "description": "Custom website and app development for small businesses."
+    },
+    {
+      "name": "NextGen Robotics",
+      "address": "89 Automation Park, Boston, MA",
+      "phone": "+1-617-555-0176",
+      "website": "https://www.nextgenrobotics.com",
+      "icon": "nextgenrobotics.png",
+      "membership_level": 3,
+      "description": "Innovating the future with cutting-edge robotics."
+    },
+    {
+      "name": "Wellness Haven",
+      "address": "321 Serenity Ln, Boulder, CO",
+      "phone": "+1-303-555-0145",
+      "website": "https://www.wellnesshaven.com",
+      "icon": "wellnesshaven.jpeg",
+      "membership_level": 2,
+      "description": "Holistic health and wellness solutions."
+    },
+    {
+      "name": "EcoCraft Builders",
+      "address": "67 Greenfield St, Portland, OR",
+      "phone": "+1-503-555-0153",
+      "website": "https://www.ecocraftbuilders.com",
+      "icon": "ecocraft.jpg",
+      "membership_level": 1,
+      "description": "Sustainable construction and eco-friendly architecture."
+    },
+    {
+      "name": "Skyline Financial Group",
+      "address": "910 Wall St, New York, NY",
+      "phone": "+1-212-555-0167",
+      "website": "https://www.skylinefinancial.com",
+      "icon": "skylinefinancial.jpg",
+      "membership_level": 3,
+      "description": "Comprehensive financial planning and investment services."
+    }
+  ]
+}

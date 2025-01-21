@@ -11,12 +11,18 @@ window.onload = () => {
 const url = "../data/members.json";
 
 async function getMembers() {
-  const response = await fetch(url);
-  const data = await response.json();
-  console.table(data.companies);
-  displayMembers(data.companies);
+  try{
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Failed to fetch members.json. status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.table(data.companies);
+        displayMembers(data.companies);
+    } catch(error){
+        console.error("Error fetching members.json: ", error);
+    }
 }
-
 const displayMembers = (members) => {
   const cards = document.querySelector("#cards");
   cards.innerHTML = "";

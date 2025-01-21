@@ -8,7 +8,7 @@ window.onload = () => {
 
 // Directory Website
 
-const url = "../data/members.json";
+const url = "/chamber/data/members.json";
 
 async function getMembers() {
   try {
@@ -30,16 +30,18 @@ const displayMembers = (members) => {
   cards.innerHTML = "";
   members.forEach((member) => {
     const card = document.createElement("section");
+    const cardDiv = document.createElement("div");
     const name = document.createElement("h4");
     const portrait = document.createElement("img");
     const adress = document.createElement("p");
     const phone = document.createElement("p");
     const memWebsite = document.createElement("p");
-    const description = document.createElement("p");
     const membership = document.createElement("p");
+    const description = document.createElement("p");
 
+    cardDiv.classList.add("cardData");
     name.textContent = member.name;
-    portrait.setAttribute("src", `../images/${member.icon}`);
+    portrait.setAttribute("src", `/chamber/images/${member.icon}`);
     portrait.setAttribute("alt", `Logo of ${member.name}`);
     portrait.setAttribute("loading", "lazy");
     /*portrait.setAttribute("width", "200");
@@ -69,13 +71,17 @@ const displayMembers = (members) => {
 
     // Append the section(card) with the created elements
 
+    cardDiv.appendChild(name);
+    cardDiv.appendChild(adress);
+    cardDiv.appendChild(phone);
+    cardDiv.appendChild(memWebsite);
+    cardDiv.appendChild(membership);
+    cardDiv.appendChild(description);
+
     card.appendChild(portrait);
-    card.appendChild(name);
-    card.appendChild(adress);
-    card.appendChild(phone);
-    card.appendChild(memWebsite);
-    card.appendChild(membership);
-    card.appendChild(description);
+    card.appendChild(cardDiv);
+
+    cards.appendChild(card);
   });
 };
 

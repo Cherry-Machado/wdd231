@@ -11,17 +11,19 @@ window.onload = () => {
 const url = "../data/members.json";
 
 async function getMembers() {
-  try{
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Failed to fetch members.json. status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.table(data.companies);
-        displayMembers(data.companies);
-    } catch(error){
-        console.error("Error fetching members.json: ", error);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(
+        `HTTP error! Failed to fetch members.json. status: ${response.status}`
+      );
     }
+    const data = await response.json();
+    console.table(data.companies);
+    displayMembers(data.companies);
+  } catch (error) {
+    console.error("Error fetching members.json: ", error);
+  }
 }
 const displayMembers = (members) => {
   const cards = document.querySelector("#cards");
@@ -52,18 +54,18 @@ const displayMembers = (members) => {
 
     let membershipLevel = "";
     switch (member.membership_level) {
-        case 1:
-            membershipLevel = "Member";
-            break;
-        case 2:
-            membershiplevel = "Silver";
-            break;
-        case 3:
-            membershipLevel = "Gold";
-            break;
-      }
+      case 1:
+        membershipLevel = "Member";
+        break;
+      case 2:
+        membershiplevel = "Silver";
+        break;
+      case 3:
+        membershipLevel = "Gold";
+        break;
+    }
 
-      membership.textContent = `Membership level: ${member.membership}`;
+    membership.textContent = `Membership level: ${member.membership}`;
 
     // Append the section(card) with the created elements
 
@@ -74,7 +76,6 @@ const displayMembers = (members) => {
     card.appendChild(memWebsite);
     card.appendChild(membership);
     card.appendChild(description);
-    
   });
 };
 

@@ -6,6 +6,16 @@ window.onload = () => {
   ).textContent = `Last Modification: ${document.lastModified}`;
 };
 
+// hamburguerElement.addEventListener("click") callback
+
+const hamburguerElement = document.querySelector('#myButton');
+const navElement = document.querySelector('.menuLinks');
+
+hamburguerElement.addEventListener('click', () => {
+    navElement.classList.toggle('open');
+    hamburguerElement.classList.toggle('open');
+});
+
 // Directory Website
 
 const url = "/chamber/data/members.json";
@@ -44,11 +54,6 @@ const displayMembers = (members) => {
     portrait.setAttribute("src", `/chamber/images/${member.icon}`);
     portrait.setAttribute("alt", `Logo of ${member.name}`);
     portrait.setAttribute("loading", "lazy");
-    /*portrait.setAttribute("width", "200");
-    portrait.setAttribute("height", "200");
-    portrait.setAttribute("width", "100%");
-    portrait.setAttribute("height", "100%");*/
-
     adress.textContent = member.adress;
     phone.textContent = member.phone;
     memWebsite.textContent = member.website;
@@ -60,14 +65,14 @@ const displayMembers = (members) => {
         membershipLevel = "Member";
         break;
       case 2:
-        membershiplevel = "Silver";
+        membershipLevel = "Silver";
         break;
       case 3:
         membershipLevel = "Gold";
         break;
     }
 
-    membership.textContent = `Membership level: ${member.membership}`;
+    membership.textContent = `Membership level: ${membershipLevel}`;
 
     // Append the section(card) with the created elements
 

@@ -26,37 +26,44 @@ async function getMembers() {
 const displayMembers = (members) => {
   const cards = document.querySelector("#cards");
   cards.innerHTML = "";
-  let membershipLevel = "";
   members.forEach((member) => {
-    let card = document.createElement("section");
-    let name = document.createElement("h4");
-    let portrait = document.createElement("img");
-    let adress = document.createElement("p");
-    let phone = document.createElement("p");
-    let email = document.createElement("p");
-    let membership = document.createElement("p");
-    let description = document.createElement("p");
+    const card = document.createElement("section");
+    const name = document.createElement("h4");
+    const portrait = document.createElement("img");
+    const adress = document.createElement("p");
+    const phone = document.createElement("p");
+    const memWebsite = document.createElement("p");
+    const description = document.createElement("p");
+    const membership = document.createElement("p");
 
-    name.textContent = `${member.name}`;
-    portrait.setAttribute("src", member.icon);
+    name.textContent = member.name;
+    portrait.setAttribute("src", `../images/${member.icon}`);
     portrait.setAttribute("alt", `Logo of ${member.name}`);
     portrait.setAttribute("loading", "lazy");
     /*portrait.setAttribute("width", "200");
-            portrait.setAttribute("height", "200");*/
+    portrait.setAttribute("height", "200");
     portrait.setAttribute("width", "100%");
-    portrait.setAttribute("height", "100%");
+    portrait.setAttribute("height", "100%");*/
 
-    adress.innerHTML = `<span class="label">${member.adress}</span> `;
-    phone.innerHTML = `<span class="label">${member.phone}</span> `;
-    email.innerHTML = `<span class="label email">${member.email}</span> `;
-    if (member.membership_level === 1) {
-      membershipLevel = "Member";
-    } else if (member.membership_level === 2) {
-      membershipLevel = "Silver";
-    } else {
-      membershipLevel = "Gold";
-    }
-    membership.innerHTML = `<span class="label">${member.membership}</span> `;
+    adress.textContent = member.adress;
+    phone.textContent = member.phone;
+    memWebsite.textContent = member.website;
+    description.textContent = member.description;
+
+    let membershipLevel = "";
+    switch (member.membership_level) {
+        case 1:
+            membershipLevel = "Member";
+            break;
+        case 2:
+            membershiplevel = "Silver";
+            break;
+        case 3:
+            membershipLevel = "Gold";
+            break;
+      }
+
+      membership.textContent = `Membership level: ${member.membership}`;
 
     // Append the section(card) with the created elements
 
@@ -64,8 +71,10 @@ const displayMembers = (members) => {
     card.appendChild(name);
     card.appendChild(adress);
     card.appendChild(phone);
-    card.appendChild(email);
+    card.appendChild(memWebsite);
     card.appendChild(membership);
+    card.appendChild(description);
+    
   });
 };
 

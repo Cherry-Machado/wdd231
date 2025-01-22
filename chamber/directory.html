@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>São Paulo Chamber of Commerce Website</title>
+    <title>São Paulo Chamber of Commerce</title>
     <meta name="description"
         content="WDD 231 - Web Frontend Development I | Cherry Machado | This is my São Paulo Chamber of Commerce Website.">
     <meta name="author" content="Cherry Machado">
@@ -12,7 +12,7 @@
     <meta property="og:title" content="São Paulo Chamber of Commerce Website - Cherry Machado">
     <meta property="og:description"
         content="WDD 231 - Web Frontend Development I | Cherry Machado | This is my São Paulo Chamber of Commerce Website.">
-    <meta property="og:image" content="./images/Chambers_SP.jpg">
+    <meta property="og:image" content="./images/chambers_sp.jpg">
     <meta property="og:url" content="https://cherry-machado.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
     <!-- End Meta Tags -->
@@ -27,13 +27,16 @@
     <link rel="stylesheet" href="./styles/normalize.css" type="text/css">
     <link rel="stylesheet" href="./styles/chamber.css" type="text/css">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <script defer src="./scripts/chamber.js"></script>
+
+    <!-- javascript file -->
+    <script src="./scripts/chamber.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="/chamber/images/chamber_logo.png" alt="Logo of Sao Paulo Chamber of Commerce" width="50" height="50" loading="lazy">
-        <span class="header__title">São Paulo<br>Chamber of Commerce</span>
+        <img src="/chamber/images/chamber-logo.png" alt="Logo of Sao Paulo Chamber of Commerce" width="50" height="50"
+            loading="lazy">
+        <h1 class="header__title">São Paulo<br>Chamber of Commerce</h1>
         <button id="myButton" title="menuLinksButton"></button>
 
     </header>
@@ -51,7 +54,7 @@
             <button class="menu__button" id="list">&#9776; List</button>
         </div>
         <hr>
-        <article >
+        <article>
             <div class="grid" id="cards"></div>
         </article>
     </main>

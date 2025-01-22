@@ -54,7 +54,7 @@ const displayMembers = (members) => {
     portrait.setAttribute("src", `/chamber/images/${member.icon}`);
     portrait.setAttribute("alt", `Logo of ${member.name}`);
     portrait.setAttribute("loading", "lazy");
-    adress.textContent = member.adress;
+    adress.textContent = member.address;
     phone.textContent = member.phone;
     memWebsite.textContent = member.website;
     description.textContent = member.description;
@@ -77,12 +77,14 @@ const displayMembers = (members) => {
     // Append the section(card) with the created elements
 
     cardDiv.appendChild(name);
+    cardDiv.appendChild(description);
     cardDiv.appendChild(adress);
     cardDiv.appendChild(phone);
     cardDiv.appendChild(memWebsite);
     cardDiv.appendChild(membership);
-    cardDiv.appendChild(description);
+    
 
+    
     card.appendChild(portrait);
     card.appendChild(cardDiv);
 

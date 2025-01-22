@@ -73,6 +73,90 @@ ul.menuLinks a:hover {
     letter-spacing: .03rem;
 }
 
+/********** Main **************/
+main {
+    max-width: 700px;
+	margin: 0 auto;
+	padding: 0.5rem;
+	background-color: var(--letter-color); 
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: var(--active-color-1);
+	text-align: center;
+}
+
+.menu__button {
+	padding: .5rem;
+	font-weight: 700;
+    background-color: var(--letter-color);
+    border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+    color: var(--primary-color);
+    border-radius: .2rem;
+    margin-right: 1rem;
+
+}
+
+
+.menu__button:hover {
+    background-color: var(--primary-color);
+    color: var(--letter-color);
+}
+
+.menu__button:focus {
+    background-color: var(--primary-color);
+    color: var(--active-color-2)
+}
+
+.menu__button:active {
+    background-color: var(--primary-color);
+    color: var(--letter-color);
+}
+
+section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #eee;
+    margin: .5rem   ;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+    width: 8rem;
+}
+
+.grid section > * {
+	margin-top: 1rem;
+}
+
+.grid h4 {
+    font-family: "Poetsen One", sans-serif;
+    color: var(--primary-color);
+}
+
+.grid p {
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    line-height: 1rem;
+    margin: .5rem;
+}
 /********** Footer ************/
 
 footer {

@@ -8,12 +8,12 @@ window.onload = () => {
 
 // hamburguerElement.addEventListener("click") callback
 
-const hamburguerElement = document.querySelector('#myButton');
-const navElement = document.querySelector('.menuLinks');
+const hamburguerElement = document.querySelector("#myButton");
+const navElement = document.querySelector(".menuLinks");
 
-hamburguerElement.addEventListener('click', () => {
-    navElement.classList.toggle('open');
-    hamburguerElement.classList.toggle('open');
+hamburguerElement.addEventListener("click", () => {
+  navElement.classList.toggle("open");
+  hamburguerElement.classList.toggle("open");
 });
 
 // Directory Website
@@ -82,9 +82,7 @@ const displayMembers = (members) => {
     cardDiv.appendChild(phone);
     cardDiv.appendChild(memWebsite);
     cardDiv.appendChild(membership);
-    
 
-    
     card.appendChild(portrait);
     card.appendChild(cardDiv);
 
@@ -100,15 +98,14 @@ const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("#cards");
 
-
 gridbutton.addEventListener("click", () => {
-	display.classList.add("grid");
-	display.classList.remove("list");
+  display.classList.add("grid");
+  display.classList.remove("list");
 });
 
-listbutton.addEventListener("click", showList); 
+listbutton.addEventListener("click", showList);
 
 function showList() {
-	display.classList.add("list");
-	display.classList.remove("grid");
+  display.classList.add("list");
+  display.classList.remove("grid");
 }

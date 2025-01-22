@@ -10,28 +10,24 @@
 header {
     display: grid;
     grid-template-columns: 44px auto 44px;
-    align-items: start; 
+    align-items: start;
     padding: 1rem 1rem 1rem 1.4rem;
     color: var(--primary-color);
     font-family: "Poetsen One", sans-serif;
     background-color: var(--primary-color);
-    /* margin:0; */
-    gap:0;
+    gap: 0;
 }
 
 
 .header__title {
     color: var(--letter-color);
-    font-size:x-large;
+    font-size: x-large;
     padding-left: 1rem;
-    /* margin: 0; */
 }
 
 /* Navigation and Humbergurer */
 
 nav {
-    /* margin: 0; */
-    /* padding: 0; */
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: large;
@@ -58,7 +54,6 @@ ul.menuLinks {
     display: none;
     list-style-type: none;
     margin: 0;
-    /* padding: 0; */
 
 }
 
@@ -68,8 +63,7 @@ ul.menuLinks li a {
     padding: .75rem 5vw;
     color: var(--primary-color);
     text-decoration: none;
-    /* margin: 0; */
-  
+
 }
 
 li.current-menu-item a {
@@ -95,26 +89,26 @@ ul.menuLinks a:hover {
 /********** Main **************/
 main {
     max-width: 96%;
-	margin: 0 auto;
-	padding: 0.5rem;
-	background-color: var(--white-bass-color);
-	font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: var(--white-bass-color);
+    font-family: "Roboto", sans-serif;
 }
 
 .menu {
-	margin: 1rem auto;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 0.5rem;
-	background-color: var(--active-color-1);
-	text-align: center;
+    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: var(--active-color-1);
+    text-align: center;
 }
 
 .menu__button {
-	padding: .8rem;
-	font-weight: 700;
+    padding: .8rem;
+    font-weight: 700;
     background-color: var(--letter-color);
     border: 1px solid var(--white-bass-color);
-	box-shadow: 0 0 10px #333;
+    box-shadow: 0 0 10px #333;
     color: var(--primary-color);
     border-radius: .2rem;
     margin-right: 1.5rem;
@@ -140,10 +134,10 @@ main {
 /* This section create every card */
 
 section {
-  
+
     border: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 0.5rem;
-	background-color: var(--letter-color);
+    padding: 0.5rem;
+    background-color: var(--letter-color);
     margin: .5rem auto;
     width: fit-content;
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
@@ -160,16 +154,16 @@ section {
 /************* Section to activate GRID ********************/
 
 .grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	grid-gap: .5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .5rem 2rem;
     justify-items: center;
     align-items: stretch;
-    
+
 }
 
 .grid section {
-	text-align: center;
+    text-align: center;
 }
 
 .grid img {
@@ -177,13 +171,13 @@ section {
     max-width: 150px;
     height: auto;
     border-radius: 10px;
-	border: 1px solid var(--white-bass-color);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--white-bass-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 8rem;
 }
 
-.grid section > * {
-	margin-top: 1rem;
+.grid section>* {
+    margin-top: 1rem;
 }
 
 
@@ -213,18 +207,18 @@ section {
 }
 
 .list {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	grid-gap: .5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .5rem;
     justify-items: center;
     align-items: stretch;
-    
+
 }
 
 .list section {
-   
-	text-align: center;
-    
+
+    text-align: center;
+
 }
 
 .list section:nth-child(even) {
@@ -327,25 +321,26 @@ footer div h4 {
         justify-content: flex-start;
     }
 
-/*********** List Activate in large screen ***********/
+    /*********** List Activate in large screen ***********/
     .list section {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        max-width:fit-content;
+        max-width: fit-content;
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
-        
-        
+
+
     }
+
     #cards.list {
         display: flex;
         flex-direction: column;
-       
+
     }
-    
+
     .list section .cardData {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -354,8 +349,8 @@ footer div h4 {
         padding: 0.25rem;
         align-items: center;
         justify-items: center;
-       
-        
+
+
     }
-    
+
 }

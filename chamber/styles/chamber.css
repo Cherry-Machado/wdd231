@@ -80,7 +80,7 @@ main {
 	margin: 0 auto;
 	padding: 0.5rem;
 	background-color: var(--white-bass-color);
-	font-family: Roboto, Helvetica, sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 .menu {
@@ -119,7 +119,10 @@ main {
     color: var(--letter-color);
 }
 
+/* This section create every card */
+
 section {
+  
     border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0.5rem;
 	background-color: var(--letter-color);
@@ -136,17 +139,18 @@ section {
     box-sizing: border-box;
 }
 
+/************* Section to activate GRID ********************/
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	grid-gap: 2rem;
+	grid-gap: .5rem 2rem;
     justify-items: center;
     align-items: stretch;
     
 }
 
 .grid section {
-   
 	text-align: center;
 }
 
@@ -164,71 +168,70 @@ section {
 	margin-top: 1rem;
 }
 
-.grid h4 {
+
+.grid h3 {
     font-family: "Poetsen One", sans-serif;
     color: var(--primary-color);
 }
 
 .grid p {
     font-family: "Roboto", sans-serif;
-    font-size: small;
-    line-height: 1rem;
-    margin: .5rem;
+    font-size: medium;
+    line-height: 1.5rem;
+    margin: .3rem;
 }
 
-/************* Section para activar GRID ********************/
+.grid p:nth-child(2) {
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/************* Section to activate LIST ********************/
 
 .list section img {
     display: none;
 }
 
-/*article.list #cards {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: .5rem;
+    justify-items: center;
+    align-items: stretch;
+    
 }
 
-article.list #cards section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--letter-color);
-    padding: 0.5rem;
-    border-bottom: 1px solid var(--primary-color);
+.list section {
+   
+	text-align: center;
+    
 }
 
-article.list #cards section:nth-child(odd) {
+.list section:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-article.list #cards section img {
-    display: none;
+.list h3 {
+    font-family: "Poetsen One", sans-serif;
+    color: var(--primary-color);
 }
 
-article.list #cards section .cardData {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: left;
-    gap: 0.5rem;
+.list p {
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+    line-height: 1.5rem;
+    margin: .3rem;
 }
 
-article.list #cards section .cardData * {
-    margin: 0;
-    padding: 0 0.5rem;
-    flex: 1 1 auto;
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
+.list p:nth-child(2) {
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
 }
 
-article.list #cards section:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-*/
 
 /********** Footer Styling ************/
 
@@ -301,7 +304,8 @@ footer div h4 {
     .footer__socialmedia {
         justify-content: flex-start;
     }
-
+    
+/*********** List Activate in large screen ***********/
     .list section {
         display: flex;
         flex-direction: row;
@@ -332,12 +336,4 @@ footer div h4 {
         
     }
     
-    
-    .list section > * {
-        margin: 0 1rem;
-    }
-    
-   /* .list section img {
-        display: none;
-    }*/
 }

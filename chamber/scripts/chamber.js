@@ -41,7 +41,7 @@ const displayMembers = (members) => {
   members.forEach((member) => {
     const card = document.createElement("section");
     const cardDiv = document.createElement("div");
-    const name = document.createElement("h4");
+    const name = document.createElement("h3");
     const portrait = document.createElement("img");
     const adress = document.createElement("p");
     const phone = document.createElement("p");

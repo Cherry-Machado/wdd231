@@ -177,11 +177,58 @@ section {
 }
 
 /************* Section para activar GRID ********************/
-article.list #cards {
+
+.list section img {
+    display: none;
+}
+
+/*article.list #cards {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
+
+article.list #cards section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--letter-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+article.list #cards section:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+article.list #cards section img {
+    display: none;
+}
+
+article.list #cards section .cardData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    gap: 0.5rem;
+}
+
+article.list #cards section .cardData * {
+    margin: 0;
+    padding: 0 0.5rem;
+    flex: 1 1 auto;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+article.list #cards section:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+*/
 
 /********** Footer Styling ************/
 
@@ -254,4 +301,43 @@ footer div h4 {
     .footer__socialmedia {
         justify-content: flex-start;
     }
+
+    .list section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width:fit-content;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        
+        
+    }
+    #cards.list {
+        display: flex;
+        flex-direction: column;
+       
+    }
+    
+    .list section .cardData {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: .5rem;
+        margin: 0;
+        padding: 0.25rem;
+        align-items: center;
+        justify-items: center;
+       
+        
+    }
+    
+    
+    .list section > * {
+        margin: 0 1rem;
+    }
+    
+   /* .list section img {
+        display: none;
+    }*/
 }

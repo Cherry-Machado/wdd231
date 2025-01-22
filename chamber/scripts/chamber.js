@@ -98,17 +98,17 @@ getMembers();
 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
+const display = document.querySelector("#cards");
 
 
 gridbutton.addEventListener("click", () => {
-	display.classList.add("list");
-	display.classList.remove("grid");
+	display.classList.add("grid");
+	display.classList.remove("list");
 });
 
 listbutton.addEventListener("click", showList); 
 
 function showList() {
-	display.classList.add("grid");
-	display.classList.remove("list");
+	display.classList.add("list");
+	display.classList.remove("grid");
 }

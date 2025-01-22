@@ -10,16 +10,28 @@
 header {
     display: grid;
     grid-template-columns: 44px auto 44px;
-    align-items: end;
-    padding: 1rem 0rem 0rem 1rem;
+    align-items: start; 
+    padding: 1rem 1rem 1rem 1.4rem;
     color: var(--primary-color);
     font-family: "Poetsen One", sans-serif;
+    background-color: var(--primary-color);
+    /* margin:0; */
+    gap:0;
+}
 
+
+.header__title {
+    color: var(--letter-color);
+    font-size:x-large;
+    padding-left: 1rem;
+    /* margin: 0; */
 }
 
 /* Navigation and Humbergurer */
 
 nav {
+    /* margin: 0; */
+    /* padding: 0; */
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: large;
@@ -34,28 +46,34 @@ nav {
     font-size: 2rem;
     background: none;
     border: none;
-    color: var(--primary-color);
+    color: var(--letter-color);
     cursor: pointer;
     width: 100%;
     text-align: right;
     padding: .25rem 2vw;
-}
-
-ul.menuLinks li a {
-    display: block;
-    padding: .75rem 5vw;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-li.current-menu-item a {
-    background-color: rgba(0, 0, 0, 0.1);
-
+    margin-top: -.5rem;
 }
 
 ul.menuLinks {
     display: none;
     list-style-type: none;
+    margin: 0;
+    /* padding: 0; */
+
+}
+
+ul.menuLinks li a {
+
+    display: block;
+    padding: .75rem 5vw;
+    color: var(--primary-color);
+    text-decoration: none;
+    /* margin: 0; */
+  
+}
+
+li.current-menu-item a {
+    background-color: rgba(0, 0, 0, 0.1);
 
 }
 
@@ -92,14 +110,14 @@ main {
 }
 
 .menu__button {
-	padding: .5rem;
+	padding: .8rem;
 	font-weight: 700;
     background-color: var(--letter-color);
     border: 1px solid var(--white-bass-color);
 	box-shadow: 0 0 10px #333;
     color: var(--primary-color);
     border-radius: .2rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 
 }
 
@@ -253,6 +271,10 @@ footer div:first-child {
     text-align: center;
 }
 
+footer div:nth-child(3) {
+    margin-top: 1rem;
+}
+
 footer div h4 {
     font-family: "Poetsen One", sans-serif;
     font-size: 1.2rem;
@@ -304,7 +326,7 @@ footer div h4 {
     .footer__socialmedia {
         justify-content: flex-start;
     }
-    
+
 /*********** List Activate in large screen ***********/
     .list section {
         display: flex;

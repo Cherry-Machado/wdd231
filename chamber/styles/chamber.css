@@ -79,7 +79,7 @@ main {
     max-width: 96%;
 	margin: 0 auto;
 	padding: 0.5rem;
-	background-color: var(--white-bass-color)
+	background-color: var(--white-bass-color);
 	font-family: Roboto, Helvetica, sans-serif;
 }
 

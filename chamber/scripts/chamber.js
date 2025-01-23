@@ -18,11 +18,7 @@ hamburguerElement.addEventListener("click", () => {
 
 // Directory Website
 
-<<<<<<< HEAD
 const url = "../chamber/data/members.json";
-=======
-const url = "../data/members.json";
->>>>>>> 8fcf48743a835dd8265e8cf39e2f883e73bddbc8
 
 async function getMembers() {
   try {

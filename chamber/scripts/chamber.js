@@ -51,7 +51,7 @@ const displayMembers = (members) => {
 
     cardDiv.classList.add("cardData");
     name.textContent = member.name;
-    portrait.setAttribute("src", `./images/${member.icon}`);
+    portrait.setAttribute("src", `../chamber/images/${member.icon}`);
     portrait.setAttribute("alt", `Logo of ${member.name}`);
     portrait.setAttribute("loading", "lazy");
     adress.textContent = member.address;

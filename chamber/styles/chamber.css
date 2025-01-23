@@ -137,7 +137,7 @@ section {
 
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
-    background-color: var(--letter-color);
+    background-color: var(--active-color-2);
     margin: .5rem auto;
     width: fit-content;
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);

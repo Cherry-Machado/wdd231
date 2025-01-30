@@ -441,11 +441,7 @@ footer div h4 {
 
     /* ************************************************* */
     /* Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+
 
 /* Contenedor principal con Grid */
 .container {
@@ -455,15 +451,13 @@ body, html {
     gap: 10px;
     padding: 10px;
     grid-template-areas: 
-        "events weather forecast"
-        "business1 business2 business3";
+        "events weather forecast";
 }
 
 /* Definir áreas */
 .events { grid-area: events; }
 .current-weather { grid-area: weather; }
 .weather-forecast { grid-area: forecast; }
-.business-card { grid-area: auto; }
 
 /* Ajustar la segunda fila */
 .container-2 {
@@ -481,16 +475,18 @@ body, html {
 }
 
 /* Encabezados */
-.header {
+.header-box {
+    display: flex;
     background-color: black;
     color: white;
     padding: 10px;
     text-align: center;
 }
 
-.header h2 {
+.header-box h2 {
     margin: 0;
     font-size: 1.2rem;
+    display: flex;
 }
 
 /* Caja de Current Weather */

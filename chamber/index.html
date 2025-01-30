@@ -29,7 +29,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
     <!-- javascript file -->
-    <script defer src="scripts/chamber.js"></script>
+    <script defer src="scripts/chamber.js" type="module"></script>
 </head>
 
 <body>
@@ -49,8 +49,8 @@
         </ul>
     </nav>
     <main>
-        <div class="hero">
-            <div class="hero-content">
+        <section class="hero">
+            <article class="hero-content">
                 <h1 class="hero-content-title"><span class="welcome">Welcome</span> to the<br> São Paulo Chamber of
                     Commerce</h1>
                 <p class="hero-content-paragraph">The site to know about our organization, our community, and our
@@ -58,9 +58,109 @@
                 <div class="hero-content-btn">
                     <a href="#" class="btn">Join Us</a>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
         <hr>
+        <!-- ------------------ Prueba--------------- --> 
+
+        <main class="container">
+            <!-- Fila 1 -->
+            <section class="box events" aria-labelledby="events-heading">
+                <header class="header">
+                    <h2 id="events-heading">Events</h2>
+                </header>
+                <!-- Contenido de Events -->
+            </section>
+        
+            <section class="box current-weather" aria-labelledby="current-weather-heading">
+                <header class="header">
+                    <h2 id="current-weather-heading">Current Weather</h2>
+                </header>
+                <div class="content">
+                    <figure class="image">
+                        <!-- Imagen del clima -->
+                        <img src="weather-icon.png" alt="Weather Icon">
+                    </figure>
+                    <div class="details">
+                        <p>75°F</p>
+                        <p>Party Cloudy</p>
+                        <p>High: 85°</p>
+                        <p>Low: 52°</p>
+                        <p>Humidity: 34%</p>
+                        <p>Sunrise: 7:30am</p>
+                        <p>Sunset: 9:59pm</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="box weather-forecast" aria-labelledby="weather-forecast-heading">
+                <header class="header">
+                    <h2 id="weather-forecast-heading">Weather Forecast</h2>
+                </header>
+                <div class="content">
+                    <p>Today: 90°F</p>
+                    <p>Wednesday: 89°F</p>
+                    <p>Thursday: 68°F</p>
+                </div>
+            </section>
+        </main>
+        
+        <main class="container-2">
+            <!-- Fila 2 -->
+            <article class="box business-card" aria-labelledby="business1-heading">
+                <div class="business-content">
+                    <h3 id="business1-heading">Business Name</h3>
+                    <p class="tagline">Business Tag Line</p>
+                    <div class="contact-info">
+                        <figure class="image">
+                            <!-- Imagen de la empresa -->
+                            <img src="business-icon.png" alt="Business Icon">
+                        </figure>
+                        <address class="details">
+                            <p>EMAIL: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                            <p>PHONE: <a href="tel:800-555-5555">800-555-5555</a></p>
+                            <p>URL: <a href="https://mybusiness.com">mybusiness.com</a></p>
+                        </address>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="box business-card" aria-labelledby="business2-heading">
+                <div class="business-content">
+                    <h3 id="business2-heading">Business Name</h3>
+                    <p class="tagline">Business Tag Line</p>
+                    <div class="contact-info">
+                        <figure class="image">
+                            <img src="business-icon.png" alt="Business Icon">
+                        </figure>
+                        <address class="details">
+                            <p>EMAIL: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                            <p>PHONE: <a href="tel:800-555-5555">800-555-5555</a></p>
+                            <p>URL: <a href="https://mybusiness.com">mybusiness.com</a></p>
+                        </address>
+                    </div>
+                </div>
+            </article>
+        
+            <article class="box business-card" aria-labelledby="business3-heading">
+                <div class="business-content">
+                    <h3 id="business3-heading">Business Name</h3>
+                    <p class="tagline">Business Tag Line</p>
+                    <div class="contact-info">
+                        <figure class="image">
+                            <img src="business-icon.png" alt="Business Icon">
+                        </figure>
+                        <address class="details">
+                            <p>EMAIL: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                            <p>PHONE: <a href="tel:800-555-5555">800-555-5555</a></p>
+                            <p>URL: <a href="https://mybusiness.com">mybusiness.com</a></p>
+                        </address>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- ------------------ Fin de la Prueba--------------- --> 
         <article>
             <div class="grid" id="cards"></div>
         </article>

@@ -133,7 +133,7 @@ main {
 
 /* This section create every card */
 
-section {
+.card-ppal {
 
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
@@ -439,4 +439,129 @@ footer div h4 {
         padding: 12px 30px 12px 30px;
     }
 
+    /* ************************************************* */
+    /* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
+
+/* Contenedor principal con Grid */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    padding: 10px;
+    grid-template-areas: 
+        "events weather forecast"
+        "business1 business2 business3";
+}
+
+/* Definir áreas */
+.events { grid-area: events; }
+.current-weather { grid-area: weather; }
+.weather-forecast { grid-area: forecast; }
+.business-card { grid-area: auto; }
+
+/* Ajustar la segunda fila */
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;;
+    gap: 10px;
+}
+
+/* Estilos comunes para las cajas */
+.box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezados */
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Caja de Current Weather */
+.current-weather .content {
+    display: flex;
+    padding: 10px;
+}
+
+.current-weather .image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-weather .details {
+    flex: 2;
+    padding-left: 10px;
+}
+
+/* Caja de Weather Forecast */
+.weather-forecast .content {
+    padding: 10px;
+}
+
+/* Cajas de Business Card (Fila 2) */
+.business-card {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.business-content {
+    text-align: center;
+}
+
+.business-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.business-content .tagline {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contact-info .image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info .details {
+    flex: 2;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+    
+}
+

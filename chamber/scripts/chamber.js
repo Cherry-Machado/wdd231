@@ -1,5 +1,6 @@
 import { getMembers } from "./getMembers.js";
 import { displayMembers } from "./displayMembers.js";
+import { displayMembersHome } from "./displayMembersHome.js";
 
 
 // Dynamically update the year and date of last modification
@@ -22,7 +23,7 @@ hamburguerElement.addEventListener("click", () => {
 
 /* Directory Website
  Call getMembers and pass displayMembers as <callback></callback> */
-getMembers(displayMembers);
+getMembers(displayMembersHome);
 
 
 /******************Activar Botón de Grid *********************/

@@ -460,7 +460,7 @@ footer div h4 {
 .weather-forecast { grid-area: forecast; }
 
 /* Ajustar la segunda fila */
-.container-2 {
+.container-card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;;
@@ -533,20 +533,20 @@ footer div h4 {
     color: #555;
 }
 
-.contact-info {
+.member-info {
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 
-.contact-info .image {
+.member-info .member-image {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.contact-info .details {
+.member-info .details {
     flex: 2;
     text-align: left;
     padding-left: 10px;

@@ -21,8 +21,10 @@ hamburguerElement.addEventListener("click", () => {
   hamburguerElement.classList.toggle("open");
 });
 
-/* Directory Website
+/* Home page Website
  Call getMembers and pass displayMembers as <callback></callback> */
+
+get 
 getMembers(displayMembersHome);
 
 

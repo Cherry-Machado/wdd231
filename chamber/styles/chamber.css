@@ -439,12 +439,11 @@ footer div h4 {
         padding: 12px 30px 12px 30px;
     }
 
-    /* ************************************************* */
-    /* Reset */
 
+/*********** Events and Weather Styles ************/
 
-/* Contenedor principal con Grid */
-.container {
+/* Grid Events and Weather Container */
+.weather-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -454,17 +453,23 @@ footer div h4 {
         "events weather forecast";
 }
 
-/* Definir áreas */
+/* Areas */
 .events { grid-area: events; }
 .current-weather { grid-area: weather; }
 .weather-forecast { grid-area: forecast; }
 
-/* Ajustar la segunda fila */
-.container-card {
+/* Members Cards Grid */
+/*.container-card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr;;
     gap: 10px;
+}*/
+
+#cards-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
 }
 
 /* Estilos comunes para las cajas */
@@ -552,10 +557,17 @@ footer div h4 {
     padding-left: 10px;
 }
 
-/* Imágenes */
-img {
+/* Imges weather Cards */
+.member-info .member-image > img {
     max-width: 100%;
     height: auto;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--white-bass-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 8rem;
 }
 
     

@@ -5,6 +5,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: "Roboto", sans-serif;
     max-width: 35%;
     margin: 0 auto;

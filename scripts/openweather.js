@@ -12,9 +12,8 @@ const myUnits = "imperial";
 
 // CONSTRUCT A FULL PATH USING TEMPLATE LIETERALS
 
-//const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=${myUnits}`;
-//const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=${myUnits}`;
-const url = `https://api.openweathermap.org/data/2.5/forecast?q=London,uk&callback=test&appid=${myKey}`;
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=${myUnits}`;
+
 // TRY TO GRAB THE CURRENT WEATHER DATA
 
 async function apiFetch() {
@@ -37,10 +36,10 @@ apiFetch();
 
 function displayResults(data) {
   currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-  const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-  // const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`; //  (This version allows sizing using @.)
+  //const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`; //  (This version allows sizing using @.)
   let desc = data.weather[0].description;
-  weatherIcon.setAttribute("SRC", iconsrc);
+  weatherIcon.setAttribute("src", iconsrc);
   weatherIcon.setAttribute("alt", data.weather[0].description);
   captionDesc.textContent = `${desc}`;
 }

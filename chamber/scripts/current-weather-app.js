@@ -1,5 +1,5 @@
-import { getWeatherData } from './apiforecast.js';
-import { createForecastCard, showError } from './uiforecast.js';
+import { getWeatherData } from './apiweather.js';
+import { createForecastCard, showError } from './uiweather.js';
 
 export function initializeForecastApp() {
     const forecastContainer = document.querySelector('.weather-forecast');

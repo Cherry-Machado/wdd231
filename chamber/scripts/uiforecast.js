@@ -41,9 +41,6 @@ export function createCurrentWeatherCard(days) {
     const card = createElement('div', ['forecast-card']);
     
     card.innerHTML = `
-      
-       
-        
         <div class="three-day-grid">
             ${days.map(day => `
                 <div class="day-card">

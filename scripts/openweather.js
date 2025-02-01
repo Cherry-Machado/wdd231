@@ -12,8 +12,9 @@ const myUnits = "imperial";
 
 // CONSTRUCT A FULL PATH USING TEMPLATE LIETERALS
 
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=${myUnits}`;
-
+//const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=${myUnits}`;
+//const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=${myUnits}`;
+const url = `https://api.openweathermap.org/data/2.5/forecast?q=London,uk&callback=test&appid=${myKey}`;
 // TRY TO GRAB THE CURRENT WEATHER DATA
 
 async function apiFetch() {

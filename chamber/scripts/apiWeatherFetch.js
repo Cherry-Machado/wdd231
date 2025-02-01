@@ -10,6 +10,6 @@ export async function apiFetch(url) {
       }
     } catch (error) {
       console.error("Error fetching weather data: ", error);
-      return null; // 
+      return null; 
     }
   }

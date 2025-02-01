@@ -1,7 +1,8 @@
 import { getMembers } from "./getMembers.js";
 import { displayMembers } from "./displayMembers.js";
 import { displayMembersHome } from "./displayMembersHome.js";
-
+import { initializeForecastApp } from "./weather-forecast-app.js";
+import { initializeCurrentWeatherApp } from "./current-weather-app.js";
 
 // Dynamically update the year and date of last modification
 window.onload = () => {
@@ -21,10 +22,15 @@ hamburguerElement.addEventListener("click", () => {
   hamburguerElement.classList.toggle("open");
 });
 
+// Call weather-forecast
+initializeCurrentWeatherApp();
+
+// Call weather-forecast
+initializeForecastApp();
+
 /* Home page Website
  Call getMembers and pass displayMembers as <callback></callback> */
 
-get 
 getMembers(displayMembersHome);
 
 

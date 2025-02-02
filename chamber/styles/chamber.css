@@ -306,7 +306,10 @@ footer div h4 {
     font-size: 1.7rem;
 }
 
-.hero-content h1 .welcome {
+.hero-content title {
+}
+
+.welcome {
     color: var(--active-color-2)
 }
 
@@ -337,7 +340,7 @@ footer div h4 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 27rem);
-    /* gap: 15px; */
+    gap: 15px; 
     grid-template-areas: 
         "events"
         "weather" 
@@ -367,17 +370,21 @@ footer div h4 {
     border-radius: 8px 8px 0 0;
     text-align: center;
     margin-bottom: .5rem;;
+    width: 100%;
 }
 
 .header-box h2 {
     margin: 0;
     font-size: 1.2rem;
     font-family: "Poetsen One", sans-serif;
+  
 }
 
 .events {
     grid-area: events;
     background-color: var(--active-color-1);
+    overflow-wrap: break-word;
+    overflow-x:auto;
 }
 
 .current-weather {
@@ -390,12 +397,13 @@ footer div h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
 }
 
 .current-weather .image img {
  
-    /* margin-left: -40px;
-    margin-right: -35px; */
+     margin-left: -20px;
+    margin-right: -25px; 
 }
 
 .current-weather .details p {
@@ -412,7 +420,7 @@ footer div h4 {
     align-items:flex-start;
     grid-area: forecast;
     background-color: var(--active-color-2);
-    padding: 0px 10px 10px 10px; 
+     
 }
 
 .weather-forecast .three-day-grid {
@@ -422,22 +430,21 @@ footer div h4 {
     justify-content: space-around;
     width: 100%;
     gap: 10px;
-   /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2px;*/
+    padding: 0px 10px 10px 10px;
+   
 }
 
 .weather-forecast .day-card {
-    background-color: var(--letter-color);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--active-color-1);
     border: 1px solid var(--primary-color);
     border-radius: 8px;
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease;
-    flex: 1;   /* nuevo */
-    min-width: 150px; /* nuevo */
-    max-width: 200px; /* nuevo */
+    flex: 1;   
+  
 }
 
 .weather-forecast .day-card:hover {
@@ -446,7 +453,18 @@ footer div h4 {
 
 .weather-forecast .day-header {
     font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--letter-color);
+    text-shadow: 2px 2px 2px gray;
+}
+
+.weather-forecast .day-card p {
     color: var(--primary-color);
+    font-weight: bold;
+    background-color: var(--active-color-2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding-top: 2px;
 }
 
 .weather-forecast .weather-icon {
@@ -455,29 +473,35 @@ footer div h4 {
 
 .weather-forecast .temp-container {
     text-align: center;
+    
 }
 
 .weather-forecast .main-temp {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    /*color: var(--primary-color);*/
     color: var(--primary-color);
+    text-shadow: 2px 2px 2px var(--letter-color);
 }
 
 /********** Cards Home ************/
 #cards-home {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    flex: 1;
     gap: 15px;
     padding: 15px;
     background-color: var(--white-bass-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
 .business-card {
     background-color: var(--letter-color);
     border: 1px solid var(--primary-color);
     border-radius: 8px;
+    overflow-wrap: break-word;
+    overflow-x:auto;
     padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -489,6 +513,7 @@ footer div h4 {
 
 .business-content {
     text-align: center;
+
 }
 
 .business-content h3 {
@@ -527,7 +552,7 @@ footer div h4 {
 .member-info .details {
     flex: 2;
     text-align: left;
-    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .member-info .details p {
@@ -537,7 +562,8 @@ footer div h4 {
 }
 
 /************ Larger Screen *************/
-@media only screen and (min-width: 38rem) {
+
+@media only screen and (min-width: 65rem) {
     #myButton {
         display: none;
     }
@@ -645,9 +671,12 @@ footer div h4 {
 
     .weather-forecast .day-card {
         /* padding: 15px; */
-        flex: 1; /* nuevo */
-        min-width: 150px; /* nuevo */
-        max-width: 200px; /* nuevo */
+        /*flex: 1; /* nuevo */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+       /* min-width: 150px; 
+        max-width: 200px;  nuevo */
     }
 
     /*********** Cards Home Styles ************/
@@ -666,3 +695,5 @@ footer div h4 {
         height: 100px;
     }
 };
+
+

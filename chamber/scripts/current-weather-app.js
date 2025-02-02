@@ -1,17 +1,18 @@
-import { getWeatherData } from './apiweather.js';
-import { createForecastCard, showError } from './uiweather.js';
+import { getCurrentWeatherData } from "./apiweather.js";
+import { createWeatherCard } from "./uiweather.js";
 
-export function initializeForecastApp() {
-    const forecastContainer = document.querySelector('.weather-forecast');
+export function initializeCurrentWeatherApp() {
+    const currentWeatherContainer = document.querySelector('.current-weather');
     
-    const loadWeatherData = async () => {
+    const loadCurrentWeatherData = async () => {
         try {
-            const data = await getWeatherData();
-            forecastContainer.appendChild(createForecastCard(data));
+            const data = await getCurrentWeatherData();
+            const card = createWeatherCard(data);
+            currentWeatherContainer.appendChild(card);
         } catch (error) {
-            showError(error.message);
+            currentWeatherContainer.innerHTML = `<p class="error-message">Error al cargar el clima: ${error.message}</p>`;
         }
     };
     
-    loadWeatherData();
+    loadCurrentWeatherData();
 }

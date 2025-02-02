@@ -20,16 +20,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" type="text/css">
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./styles/normalize.css" type="text/css">
-    <link rel="stylesheet" href="./styles/chamber.css" type="text/css">
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/chamber.css">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
     <!-- javascript file -->
-    <script defer src="scripts/chamber.js" type="module"></script>
+    <script src="scripts/chamber.js" type="module"></script>
 </head>
 
 <body>
@@ -38,7 +38,6 @@
             loading="lazy">
         <h1 class="header__title">São Paulo<br>Chamber of Commerce</h1>
         <button id="myButton" title="menuLinksButton"></button>
-
     </header>
     <nav>
         <ul class="menuLinks">
@@ -50,59 +49,33 @@
     </nav>
     <main>
         <section class="hero">
+            <h2 class="visually-hidden">Hero Section</h2>
             <article class="hero-content">
-                <h1 class="hero-content-title"><span class="welcome">Welcome</span> to the<br> São Paulo Chamber of
-                    Commerce</h1>
-                <p class="hero-content-paragraph">The site to know about our organization, our community, and our
-                    members.</p>
+                <h2 class="hero-content-title"><span class="welcome">Welcome</span> to the<br> São Paulo Chamber of Commerce</h2>
+                <p class="hero-content-paragraph">The site to know about our organization, our community, and our members.</p>
                 <div class="hero-content-btn">
                     <a href="#" class="btn">Join Us</a>
                 </div>
             </article>
         </section>
         <hr>
-        <!-- ------------------ Prueba--------------- --> 
-
-        <main class="weather-container">
+        <div class="weather-container">
             <section class="box events" aria-labelledby="events-heading">
                 <header class="header-box">
                     <h2 id="events-heading">Events</h2>
                 </header>
-                <!-- Contenido de Events -->
             </section>
-        
             <section class="box current-weather" aria-labelledby="current-weather-heading">
                 <header class="header-box">
                     <h2 id="current-weather-heading">Current Weather</h2>
                 </header>
-                <div class="content">
-                    <figure class="image">
-                        <img src="weather-icon.png" alt="Weather Icon">
-                    </figure>
-                    <div class="details">
-                        <p>75°F</p>
-                        <p>Party Cloudy</p>
-                        <p>High: 85°</p>
-                        <p>Low: 52°</p>
-                        <p>Humidity: 34%</p>
-                        <p>Sunrise: 7:30am</p>
-                        <p>Sunset: 9:59pm</p>
-                    </div>
-                </div>
             </section>
-        
             <section class="box weather-forecast" aria-labelledby="weather-forecast-heading">
-            <header class="header-box">
-                <h2 id="weather-forecast-heading">Weather Forecast</h2>
-            </header>
-                 <!--<div class="content">
-                    <p>Wind Speed: 90°F</p>
-                    <p>Wednesday: 89°F</p>
-                    <p>Thursday: 68°F</p>
-                </div> -->
+                <header class="header-box">
+                    <h2 id="weather-forecast-heading">Weather Forecast</h2>
+                </header>
             </section>
-        </main>
-       
+        </div>
         <div id="cards-home"></div>
     </main>
     <footer>
@@ -130,7 +103,6 @@
             <p>WDD231 Class Project</p>
             <p>Cherry Machado</p>
             <p>&copy; 2025 São Paulo Chamber of Commerce</p>
-            <p>
             <p id="lastModified"><span id="currentyear"></span></p>
         </div>
     </footer>

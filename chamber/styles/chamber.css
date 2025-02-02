@@ -18,15 +18,13 @@ header {
     gap: 0;
 }
 
-
 .header__title {
     color: var(--letter-color);
     font-size: x-large;
     padding-left: 1rem;
 }
 
-/* Navigation and Humbergurer */
-
+/* Navigation and Hamburger */
 nav {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -54,21 +52,17 @@ ul.menuLinks {
     display: none;
     list-style-type: none;
     margin: 0;
-
 }
 
 ul.menuLinks li a {
-
     display: block;
     padding: .75rem 5vw;
     color: var(--primary-color);
     text-decoration: none;
-
 }
 
 li.current-menu-item a {
     background-color: rgba(0, 0, 0, 0.1);
-
 }
 
 #myButton.open::before {
@@ -112,9 +106,7 @@ main {
     color: var(--primary-color);
     border-radius: .2rem;
     margin-right: 1.5rem;
-
 }
-
 
 .menu__button:hover {
     background-color: var(--primary-color);
@@ -132,9 +124,7 @@ main {
 }
 
 /* This section create every card */
-
 .card-ppal {
-
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
     background-color: var(--active-color-2);
@@ -152,14 +142,12 @@ main {
 }
 
 /************* Section to activate GRID ********************/
-
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: .5rem 2rem;
     justify-items: center;
     align-items: stretch;
-
 }
 
 .grid section {
@@ -179,7 +167,6 @@ main {
 .grid section>* {
     margin-top: 1rem;
 }
-
 
 .grid h3 {
     font-family: "Poetsen One", sans-serif;
@@ -201,7 +188,6 @@ main {
 }
 
 /************* Section to activate LIST ********************/
-
 .list section img {
     display: none;
 }
@@ -212,13 +198,10 @@ main {
     grid-gap: .5rem;
     justify-items: center;
     align-items: stretch;
-
 }
 
 .list section {
-
     text-align: center;
-
 }
 
 .list section:nth-child(even) {
@@ -244,9 +227,7 @@ main {
     font-weight: bold;
 }
 
-
 /********** Footer Styling ************/
-
 footer {
     background-color: var(--primary-color);
     color: var(--letter-color);
@@ -294,7 +275,6 @@ footer div h4 {
 }
 
 /****************** Hero *******************/
-
 .hero {
     width: 100%;
     background-image: url("../images/saopaulo-unsplash.jpg");
@@ -317,15 +297,12 @@ footer div h4 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-
 .hero-content {
     position: absolute;
     z-index: 1;
 }
 
-
 .hero-content h1 {
-
     font-size: 1.7rem;
 }
 
@@ -355,70 +332,212 @@ footer div h4 {
     color: var(--active-color-2)
 }
 
-.forecast-card {
-    border-radius: 20px;
-    padding: 10px;
-    background-color: var(--active-color-2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-     -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px); 
-}
-
-.three-day-grid {
+/********** Weather Container ************/
+.weather-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 27rem);
+    /* gap: 15px; */
+    grid-template-areas: 
+        "events"
+        "weather" 
+        "forecast";
+    background-color: var(--white-bass-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.day-card {
-    padding: 10px;
-    border-radius: 15px;
-    background: rgba(245, 246, 250, 0.5);
-    transition: transform 0.3s ease;
+.box {
+    background-color: var(--letter-color);
     border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.day-header {
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-box {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--letter-color);
+    /* padding: 10px; */
+    border-radius: 8px 8px 0 0;
     text-align: center;
-    font-weight: bold;
+    margin-bottom: .5rem;;
+}
+
+.header-box h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.events {
+    grid-area: events;
+    background-color: var(--active-color-1);
+}
+
+.current-weather {
+    grid-area: weather;
+    background-color: var(--active-color-2);
+}
+
+.current-weather .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-weather .image img {
+ 
+    /* margin-left: -40px;
+    margin-right: -35px; */
+}
+
+.current-weather .details p {
+    margin: 10px 0;
+    font-size: 1rem;
     color: var(--primary-color);
 }
 
-.day-card p {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
+.weather-forecast {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:flex-start;
+    grid-area: forecast;
+    background-color: var(--active-color-2);
+    padding: 0px 10px 10px 10px; 
 }
 
-.day-card:hover {
+.weather-forecast .three-day-grid {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+   /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;*/
+}
+
+.weather-forecast .day-card {
+    background-color: var(--letter-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1;   /* nuevo */
+    min-width: 150px; /* nuevo */
+    max-width: 200px; /* nuevo */
+}
+
+.weather-forecast .day-card:hover {
     transform: translateY(-5px);
 }
 
-.weather-icon {
-
-    width: 80px;
-    height: 80px;
-    display: block;
-    margin: 15px auto 15px auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+.weather-forecast .day-header {
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-.temp-container {
+.weather-forecast .weather-icon {
+    margin: 10px auto;
+}
+
+.weather-forecast .temp-container {
     text-align: center;
 }
 
-.main-temp {
-    font-size: 2em;
+.weather-forecast .main-temp {
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
-    line-height: 1;
 }
 
+/********** Cards Home ************/
+#cards-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--white-bass-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.business-card {
+    background-color: var(--letter-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.business-content {
+    text-align: center;
+}
+
+.business-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-family: "Poetsen One", sans-serif;
+}
+
+.business-content .tagline {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.member-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.member-info .member-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-info .member-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.member-info .details {
+    flex: 2;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.member-info .details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
 
 /************ Larger Screen *************/
-
 @media only screen and (min-width: 38rem) {
-
     #myButton {
         display: none;
     }
@@ -442,7 +561,6 @@ footer div h4 {
         justify-content: flex-start;
     }
 
-
     /*********** List Activate in large screen ***********/
     .list section {
         display: flex;
@@ -453,14 +571,11 @@ footer div h4 {
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
-
-
     }
 
     #cards.list {
         display: flex;
         flex-direction: column;
-
     }
 
     .list section .cardData {
@@ -471,14 +586,10 @@ footer div h4 {
         padding: 0.25rem;
         align-items: center;
         justify-items: center;
-
-
     }
 
     /************ Hero *****************/
-
     .hero-content h1 {
-
         font-size: 2.7rem;
         padding: 0rem 1rem 0rem;
     }
@@ -494,148 +605,64 @@ footer div h4 {
     }
 
     .hero-content-btn .btn {
-
         font-size: x-large;
         padding: 12px 30px 12px 30px;
     }
 
-
-/*********** Events and Weather Styles ************/
-
-/* Grid Events and Weather Container */
-.weather-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 10px;
-    padding: 10px;
-    grid-template-areas: 
+    /*********** Events and Weather Styles ************/
+    .weather-container {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
         "events weather forecast";
-}
+        gap: 20px;
+        padding: 20px;
+    }
 
-/* Areas */
-.events { grid-area: events; }
-.current-weather { grid-area: weather; }
-.weather-forecast { grid-area: forecast; }
 
-/* Members Cards Grid */
-/*.container-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}*/
+    .current-weather .content {
+        flex-direction: row;
+        align-items: center;
+    }
 
-#cards-home {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-}
+    .current-weather .image img {
+        width: 100px;
+        height: 100px;
+    }
 
-/* Estilos comunes para las cajas */
-.box {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-}
+    .weather-forecast .three-day-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        /* gap: 10px; */
 
-/* Encabezados */
-.header-box {
-    display: flex;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 4px;
+        margin: 4px 4px; */
+    }
 
-.header-box h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    display: flex;
-}
+    .weather-forecast .day-card {
+        /* padding: 15px; */
+        flex: 1; /* nuevo */
+        min-width: 150px; /* nuevo */
+        max-width: 200px; /* nuevo */
+    }
 
-/* Caja de Current Weather */
-.current-weather .content {
-    display: flex;
-    padding: 10px;
-}
+    /*********** Cards Home Styles ************/
+    #cards-home {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
 
-.current-weather .image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .business-card {
+        padding: 20px;
+    }
 
-.current-weather .details {
-    flex: 2;
-    padding-left: 10px;
-}
-
-/* Caja de Weather Forecast */
-.weather-forecast {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, var(--background) 0%, #dfe6e9 100%);
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Cajas de Business Card (Fila 2) */
-.business-card {
-    background-color: #f0f0f0;
-    padding: 10px;
-}
-
-.business-content {
-    text-align: center;
-}
-
-.business-content h3 {
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-.business-content .tagline {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.member-info {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.member-info .member-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.member-info .details {
-    flex: 2;
-    text-align: left;
-    padding-left: 10px;
-}
-
-/* Imges weather Cards */
-.member-info .member-image > img {
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid var(--white-bass-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 8rem;
-}
-
-    
-}
-
+    .member-info .member-image img {
+        width: 100px;
+        height: 100px;
+    }
+};

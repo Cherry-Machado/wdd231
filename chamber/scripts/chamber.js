@@ -1,5 +1,5 @@
 import { getMembers } from "./getMembers.js";
-import { displayMembers } from "./displayMembers.js";
+//import { displayMembers } from "./displayMembers.js";
 import { displayMembersHome } from "./displayMembersHome.js";
 import { initializeForecastApp } from "./weather-forecast-app.js";
 import { initializeCurrentWeatherApp } from "./current-weather-app.js";
@@ -22,7 +22,7 @@ hamburguerElement.addEventListener("click", () => {
   hamburguerElement.classList.toggle("open");
 });
 
-// Call weather-forecast
+// Call current-weather
 initializeCurrentWeatherApp();
 
 // Call weather-forecast
@@ -35,7 +35,7 @@ getMembers(displayMembersHome);
 
 
 /******************Activar Botón de Grid *********************/
-
+/*
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("#cards");
@@ -50,4 +50,5 @@ listbutton.addEventListener("click", showList);
 function showList() {
   display.classList.add("list");
   display.classList.remove("grid");
-}
+};
+*/

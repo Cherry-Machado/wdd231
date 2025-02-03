@@ -366,7 +366,6 @@ footer div h4 {
     border-radius: 8px 8px 0 0;
     text-align: center;
     margin-bottom: .5rem;
-    ;
     width: 100%;
 }
 
@@ -374,7 +373,6 @@ footer div h4 {
     margin: 0;
     font-size: 1.2rem;
     font-family: "Poetsen One", sans-serif;
-
 }
 
 .events {
@@ -398,7 +396,6 @@ footer div h4 {
 }
 
 .current-weather .image img {
-
     margin-left: -20px;
     margin-right: -25px;
 }
@@ -417,18 +414,15 @@ footer div h4 {
     align-items: flex-start;
     grid-area: forecast;
     background-color: var(--active-color-2);
-
 }
 
 .weather-forecast .three-day-grid {
-
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     gap: 10px;
     padding: 0px 10px 10px 10px;
-
 }
 
 .weather-forecast .day-card {
@@ -441,7 +435,6 @@ footer div h4 {
     text-align: center;
     transition: transform 0.3s ease;
     flex: 1;
-
 }
 
 .weather-forecast .day-card:hover {
@@ -470,7 +463,6 @@ footer div h4 {
 
 .weather-forecast .temp-container {
     text-align: center;
-
 }
 
 .weather-forecast .main-temp {
@@ -509,7 +501,6 @@ footer div h4 {
 
 .business-content {
     text-align: center;
-
 }
 
 .business-content h3 {
@@ -558,7 +549,6 @@ footer div h4 {
 }
 
 /************ Larger Screen *************/
-
 @media only screen and (min-width: 65rem) {
     #myButton {
         display: none;
@@ -681,5 +671,3 @@ footer div h4 {
         height: 100px;
     }
 }
-
-;

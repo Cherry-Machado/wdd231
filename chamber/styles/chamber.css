@@ -85,7 +85,6 @@ ul.menuLinks a:hover {
 main {
     max-width: 96%;
     margin: 0 auto;
-    padding: 0rem, 0.5rem, 0.5rem, 0.5rem;
     background-color: var(--white-bass-color);
     font-family: "Roboto", sans-serif;
 }
@@ -116,7 +115,7 @@ main {
 
 .menu__button:focus {
     background-color: var(--primary-color);
-    color: var(--active-color-2)
+    color: var(--active-color-2);
 }
 
 .menu__button:active {

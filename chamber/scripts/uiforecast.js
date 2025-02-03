@@ -22,7 +22,7 @@ export function createForecastCard(days) {
                         ${new Date(day.date).toLocaleDateString('pt-BR', { weekday: 'short', day: 'numeric'})}
                     </div>
                     <img class="weather-icon" src="https://openweathermap.org/img/wn/${day.icon}@2x.png" 
-                         alt="${day.description}">
+                         alt="${day.description}" loading="lazy">
                     <p>${day.description}</p>
                     <div class="temp-container">
                         <div class="main-temp">${Math.round(day.temp)}°C</div>

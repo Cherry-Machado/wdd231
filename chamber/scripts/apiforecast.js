@@ -18,7 +18,7 @@ export async function getWeatherData() {
 }
 
 function processForecastData(data) {
-  // Filtrar datos para 12 PM de cada día
+  // Filter data by 12:00PM everyday.
   return data.list
     .filter((item) => item.dt_txt.includes("12:00:00"))
     .slice(0, 3)

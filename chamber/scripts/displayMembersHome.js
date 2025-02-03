@@ -70,8 +70,7 @@ export const displayMembersHome = (members) => {
         businesscontent.appendChild(tagline);
         businesscontent.appendChild(memberinfo);
         businesscard.appendChild(businesscontent);
-        /*containercard.appendChild(businesscard);
-        cards.appendChild(containercard);*/
+        cards.appendChild(containercard);
         cards.appendChild(businesscard);
     });
 };

@@ -6,7 +6,7 @@ export function createWeatherCard(data) {
 
     // Create card element
     const card = document.createElement('div');
-    card.classList.add('current-weather-card'); // Añade una clase para estilizar
+    card.classList.add('current-weather-card'); 
 
 
     // Format sunrise y sunset
@@ -26,7 +26,7 @@ export function createWeatherCard(data) {
             <figure class="image">
                 <img src="https://openweathermap.org/img/wn/${
                     data.weather[0].icon
-                }@2x.png" alt="${data.weather[0].description}">
+                }@2x.png" alt="${data.weather[0].description}" loading="lazy">
             </figure>
             <div class="details">
                 <p><strong>Temperature:</strong> ${Math.round(data.main.temp)}°C</p>

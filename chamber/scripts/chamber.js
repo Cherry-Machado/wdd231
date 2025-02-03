@@ -1,5 +1,5 @@
 import { getMembers } from "./getMembers.js";
-//import { displayMembers } from "./displayMembers.js";
+import { displayMembers } from "./displayMembers.js";
 import { displayMembersHome } from "./displayMembersHome.js";
 import { initializeForecastApp } from "./weather-forecast-app.js";
 import { initializeCurrentWeatherApp } from "./current-weather-app.js";
@@ -10,6 +10,14 @@ window.onload = () => {
   document.getElementById(
     "lastModified"
   ).textContent = `Last Modification: ${document.lastModified}`;
+
+  const directoryMenuOption = document.querySelector(".directory");
+  const discoverMenuOption = document.querySelector(".discover");
+  const joinMenuOption = document.querySelector(".join");
+  directoryMenuOption.classList.remove("current-menu-item");
+  discoverMenuOption.classList.remove("current-menu-item");
+  joinMenuOption.classList.remove("current-menu-item");
+
 };
 
 // hamburguerElement.addEventListener("click") callback
@@ -22,6 +30,7 @@ hamburguerElement.addEventListener("click", () => {
   hamburguerElement.classList.toggle("open");
 });
 
+ // Actions when Home is selected in the Menu Options.
 // Call current-weather
 initializeCurrentWeatherApp();
 
@@ -34,8 +43,8 @@ initializeForecastApp();
 getMembers(displayMembersHome);
 
 
-/******************Activar Botón de Grid *********************/
-/*
+  /******************Activar Botón de Grid *******************/
+
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("#cards");
@@ -51,4 +60,13 @@ function showList() {
   display.classList.add("list");
   display.classList.remove("grid");
 };
-*/
+
+getMembers(displayMembers);
+
+
+
+
+
+
+
+

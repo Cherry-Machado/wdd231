@@ -514,6 +514,7 @@ footer div h4 {
     margin: 5px 0;
     font-size: 0.9rem;
     color: var(--secondary-color);
+    font-weight: bold;
 }
 
 .member-info {

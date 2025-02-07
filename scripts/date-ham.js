@@ -122,35 +122,47 @@ function displayCourses(filterFunction) {
   navigationList.appendChild(totalCreditsItem);
 }
 
-// Displaying course details with styles
-function displayCourseDetails(courseNumber, withStyles = false) {
-  navigationList.innerHTML = "";
-  const course = courses.find((c) => c.number === courseNumber);
+// Get the modal element
+const courseDetails = document.getElementById("course-details");
 
-  if (course) {
-    Object.entries(course).forEach(([key, value]) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${key}: ${
-        Array.isArray(value) ? value.join(", ") : value
-      }`;
-      if (withStyles) {
-        listItem.style.fontStyle = key === "completed" ? "normal" : "italic";
-        if (key === "completed") {
-          listItem.style.backgroundColor = "green";
-          listItem.style.color = "white";
-          listItem.style.fontWeight = "bold";
-        }
-      }
-      listItem.classList.add("card__navigation-item");
-      navigationList.appendChild(listItem);
-    });
-  } else {
-    const listItem = document.createElement("li");
-    listItem.textContent = `No course found with number ${courseNumber}`;
-    listItem.classList.add("card__navigation-item");
-    navigationList.appendChild(listItem);
-  }
+// Function to display course details in the modal
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+  `;
+  courseDetails.showModal();
+
+  // Close the modal when the close button is clicked
+  const closeModal = document.getElementById("closeModal");
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+
+  // Close the modal when clicking outside of it
+  courseDetails.addEventListener("click", (event) => {
+    if (event.target === courseDetails) {
+      courseDetails.close();
+    }
+  });
 }
+
+// Event listeners for the buttons in botonera-2
+document.querySelectorAll(".cta-2").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+    const courseNumber = parseInt(event.target.classList[2].replace("click-", ""), 10);
+    const course = courses.find((c) => c.number === courseNumber);
+    if (course) {
+      displayCourseDetails(course);
+    }
+  });
+});
 
 // Event listeners for course navigation
 const eventListeners = [

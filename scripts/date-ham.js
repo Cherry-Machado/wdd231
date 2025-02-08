@@ -6,6 +6,13 @@ window.onload = () => {
   ).textContent = `Last Modification: ${document.lastModified}`;
 };
 
+// Redirect to the home page when the image is clicked
+const headerImage = document.querySelector(".header_figure-cherry img");
+
+headerImage.addEventListener("click", () => {
+  window.location.href = "index.html"; // Redirect to the home page
+});
+
 // Responsive navigation menu
 const hamburger = document.querySelector(".header__hamburger");
 const navMenu = document.querySelector(".nav-menu");

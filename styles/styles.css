@@ -44,6 +44,14 @@ body {
 .header_figure-cherry img {
     width: 25%;
     padding: 0.5rem 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header_figure-cherry img:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
 }
 
 .card_figure-saopaulo {
@@ -63,6 +71,11 @@ body {
     font-weight: 400;
     text-align: left;
     padding: 2rem 2rem 2rem 0rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__title:hover {
+    transform: translateY(-5px);
 }
 
 nav {

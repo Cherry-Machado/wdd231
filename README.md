@@ -16,3 +16,7 @@ This is my Chamber Directory page: https://cherry-machado.github.io/wdd231/chamb
 This is my openweather website: https://cherry-machado.github.io/wdd231/openweather.html
 
 This is my Chamber Home Page: https://cherry-machado.github.io/wdd231/chamber/index.html
+
+# Week 04
+
+This is my Join Page: https://cherry-machado.github.io/wdd231/chamber/join.html

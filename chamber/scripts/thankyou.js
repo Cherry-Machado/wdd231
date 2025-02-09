@@ -107,7 +107,7 @@ function createForm() {
   // Submit Button
   const submitButton = document.createElement('input');
   submitButton.setAttribute('type', 'submit');
-  submitButton.setAttribute('value', 'Join to the Chamber');
+  submitButton.setAttribute('value', 'Join the Chamber');
 
   // Append all elements to the form
   form.appendChild(firstNameLabel);
@@ -136,22 +136,26 @@ const membershipLevels = [
   {
       title: 'NP Membership',
       description: 'For non-profit organizations, no fee.',
-      benefits: ['Access to community events', 'Networking opportunities']
+      benefits: ['Access to community events', 'Networking opportunities'],
+      price: '0 USD / month'
   },
   {
       title: 'Bronze Membership',
       description: 'Basic membership with essential benefits.',
-      benefits: ['All NP benefits', 'Discounted training sessions']
+      benefits: ['All NP benefits', 'Discounted training sessions'],
+      price: '50 USD /month'
   },
   {
       title: 'Silver Membership',
       description: 'Enhanced membership with additional benefits.',
-      benefits: ['All Bronze benefits', 'Advertising opportunities', 'Event discounts']
+      benefits: ['All Bronze benefits', 'Advertising opportunities', 'Event discounts'],
+      price: '100 USD /month'
   },
   {
       title: 'Gold Membership',
       description: 'Premium membership with full benefits.',
-      benefits: ['All Silver benefits', 'Spotlight positions on the homepage', 'Exclusive events']
+      benefits: ['All Silver benefits', 'Spotlight positions on the homepage', 'Exclusive events'],
+      price: '200 USD /month'
   }
 ];
 
@@ -212,9 +216,13 @@ function showModal(level) {
       benefitsList.appendChild(li);
   });
 
+  const price = document.createElement('h2');
+  price.textContent = level.price;
+
   modalContent.appendChild(closeButton);
   modalContent.appendChild(title);
   modalContent.appendChild(benefitsList);
+  modalContent.appendChild(price);
   modal.appendChild(modalContent);
 
   document.body.appendChild(modal);

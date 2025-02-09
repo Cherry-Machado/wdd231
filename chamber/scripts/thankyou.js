@@ -1,3 +1,15 @@
+// Function to validate email
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Function to validate phone number
+function validatePhone(phone) {
+  const phoneRegex = /^\+\d{1,3}\d{9,15}$/; // Example: +5511954283340
+  return phoneRegex.test(phone);
+}
+
 // Function to create the form
 function createForm() {
   const form = document.createElement('form');
@@ -57,7 +69,7 @@ function createForm() {
   phoneInput.setAttribute('name', 'phone');
   phoneInput.setAttribute('title', 'Enter your mobile phone number');
   phoneInput.setAttribute('autocomplete', 'tel');
-  phoneInput.setAttribute('placeholder', '987-555-1234');
+  phoneInput.setAttribute('placeholder', '+5511954283340');
   phoneInput.setAttribute('required', true);
   phoneLabel.appendChild(phoneInput);
 
@@ -120,6 +132,29 @@ function createForm() {
   form.appendChild(descLabel);
   form.appendChild(timestampInput);
   form.appendChild(submitButton);
+
+  // Add event listener for form submission
+  form.addEventListener('submit', function(event) {
+      let isValid = true;
+
+      // Validate Email
+      const email = emailInput.value;
+      if (!validateEmail(email)) {
+          alert('Please enter a valid email address.');
+          isValid = false;
+      }
+
+      // Validate Phone
+      const phone = phoneInput.value;
+      if (!validatePhone(phone)) {
+          alert('Please enter a valid phone number in international format (e.g., +5511954283340)');
+          isValid = false;
+      }
+
+      if (!isValid) {
+          event.preventDefault(); // Prevent form submission if validation fails
+      }
+  });
 
   return form;
 }
@@ -245,37 +280,43 @@ let formData = everything[1].split("&");
 
 // Function to extract and format form data
 function show(cup) {
-    let result = "";
-    formData.forEach((element) => {
-        if (element.startsWith(cup)) {
-            result = element.split("=")[1].replace("%40", "@").replace(/\+/g, " "); // Replace "+" with spaces
-        }
-    });
-    return result;
+  let result = "";
+  formData.forEach((element) => {
+      if (element.startsWith(cup)) {
+          result = decodeURIComponent(element.split("=")[1].replace(/\+/g, " ")); // Decode URL-encoded values
+      }
+  });
+  return result;
 }
 
 // Function to format the date as mm/dd/yyyy
 function formatDate(dateString) {
-    const date = new Date(dateString);
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
-    const day = String(date.getDate()).padStart(2, "0");
-    const year = date.getFullYear();
-    return `${month}/${day}/${year}`;
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) {
+      return "Invalid Date";
+  }
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  const day = String(date.getDate()).padStart(2, "0");
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
 }
 
 // Display the form data
 const showInfo = document.querySelector("#results");
 showInfo.innerHTML = `
-<p>First Name: ${show("first")}</p>
-<p>Last Name: ${show("last")}</p>
-<p>Email: <a href="mailto:${show("email")}">${show("email")}</a></p>
-<p>Mobile Phone: ${show("phone")}</p>
-<p>Business/Organization Name: ${show("organization")}</p>
-<p>Application Date: ${formatDate(show("timestamp"))}</p>
+<p><strong>First Name:</strong> ${show("first")}</p>
+<p><strong>Last Name:</strong> ${show("last")}</p>
+<p><strong>Email:</strong> <a href="mailto:${show("email")}">${show("email")}</a></p>
+<p><strong>Mobile Phone:</strong> ${show("phone")}</p>
+<p><strong>Business/Organization Name:</strong> ${show("organization")}</p>
+<p><strong>Business/Organization Description:</strong> ${show("description")}</p>
+<p><strong>Membership Level:</strong> ${show("membership")}</p>
+<p><strong>Application Date:</strong> ${formatDate(show("timestamp"))}</p>
 `;
 
 // Add a professional thanks message
 const thanksMessage = document.createElement('h4');
+thanksMessage.classList.add('thank-joining-message');
 thanksMessage.textContent = "Thank you for Joining Us. We look forward to serving you!";
 thanksMessage.style.fontSize = "1.2rem";
 thanksMessage.style.color = "#3D405B";
@@ -293,7 +334,7 @@ returnButton.style.padding = "0.75rem 1.5rem";
 returnButton.style.marginTop = "1rem";
 returnButton.style.cursor = "pointer";
 returnButton.addEventListener('click', () => {
-    window.location.href = "./index.html"; // Redirect to the form page
+  window.location.href = "./index.html"; // Redirect to the form page
 });
 
 // Center the button

@@ -16,9 +16,19 @@ form {
  margin: 0 auto;
 }
  
-/* h1 {
+.joining-details {
   text-align: center;
-} */
+} 
+
+.thank-joining-message {
+  text-align: center;
+}
+
+.join-page {
+  font-family: Roboto, sans-serif;
+  font-size: x-large;
+  margin-bottom: 1rem;
+}
 
 label {
   display:block;

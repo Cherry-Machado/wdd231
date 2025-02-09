@@ -551,17 +551,7 @@ footer div h4 {
 
 /************* FORM STYLING *************/
 /* Form Styles */
-:root {
-    --primary-color: #3d405B;
-    --secondary-color: #e07a5f;
-    --active-color-1: #81b29a;
-    --active-color-2: #f2cc8f;
-    --letter-color: #f4f1de;
-    --white-bass-color: #fff;
-    box-sizing: border-box;
-    
-  }
-  
+
   
   form {
    width: 250px;

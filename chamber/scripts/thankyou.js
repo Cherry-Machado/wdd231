@@ -33,6 +33,81 @@ function formatDate(dateString) {
   return `${month}/${day}/${year}`;
 }
 
+// Membership Levels Data
+const membershipLevels = [
+  {
+      title: 'NP Membership',
+      description: 'For non-profit organizations, no fee.',
+      benefits: ['Access to community events', 'Networking opportunities'],
+      price: '0 USD / month'
+  },
+  {
+      title: 'Bronze Membership',
+      description: 'Basic membership with essential benefits.',
+      benefits: ['All NP benefits', 'Discounted training sessions'],
+      price: '50 USD /month'
+  },
+  {
+      title: 'Silver Membership',
+      description: 'Enhanced membership with additional benefits.',
+      benefits: ['All Bronze benefits', 'Advertising opportunities', 'Event discounts'],
+      price: '100 USD /month'
+  },
+  {
+      title: 'Gold Membership',
+      description: 'Premium membership with full benefits.',
+      benefits: ['All Silver benefits', 'Spotlight positions on the homepage', 'Exclusive events'],
+      price: '200 USD /month'
+  }
+];
+
+const link = document.querySelector(".learn-more")
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+          showModal(level);
+      });
+
+// Function to show modal with membership benefits
+function showModal(level) {
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalBenefits = document.getElementById('modal-benefits');
+  const modalPrice = document.getElementById('modal-price');
+
+  // Find the selected membership level
+  const selectedLevel = membershipLevels.find(m => m.title === level);
+
+  // Populate modal content
+  modalTitle.textContent = selectedLevel.title;
+  modalBenefits.innerHTML = selectedLevel.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+  modalPrice.textContent = selectedLevel.price;
+
+  // Display the modal
+  modal.style.display = 'block';
+
+  // Close modal when clicking the close button
+  const closeButton = document.querySelector('.close');
+  closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside the modal
+  window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          modal.style.display = 'none';
+      }
+  });
+}
+
+// Add event listeners to "Learn More" links
+document.querySelectorAll('.learn-more').forEach(link => {
+  link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const level = e.target.closest('.membership-card').getAttribute('data-level');
+      showModal(level);
+  });
+});
+
 // Grab the entire URL for this page including the attached GET values
 const currentUrl = window.location.href;
 

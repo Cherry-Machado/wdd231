@@ -61,12 +61,6 @@ const membershipLevels = [
   }
 ];
 
-const link = document.querySelector(".learn-more")
-      link.addEventListener('click', (e) => {
-          e.preventDefault();
-          showModal(level);
-      });
-
 // Function to show modal with membership benefits
 function showModal(level) {
   const modal = document.getElementById('modal');
@@ -77,26 +71,28 @@ function showModal(level) {
   // Find the selected membership level
   const selectedLevel = membershipLevels.find(m => m.title === level);
 
-  // Populate modal content
-  modalTitle.textContent = selectedLevel.title;
-  modalBenefits.innerHTML = selectedLevel.benefits.map(benefit => `<li>${benefit}</li>`).join('');
-  modalPrice.textContent = selectedLevel.price;
+  if (selectedLevel) {
+      // Populate modal content
+      modalTitle.textContent = selectedLevel.title;
+      modalBenefits.innerHTML = selectedLevel.benefits.map(benefit => `<li>${benefit}</li>`).join('');
+      modalPrice.textContent = selectedLevel.price;
 
-  // Display the modal
-  modal.style.display = 'block';
+      // Display the modal
+      modal.style.display = 'block';
 
-  // Close modal when clicking the close button
-  const closeButton = document.querySelector('.close');
-  closeButton.addEventListener('click', () => {
-      modal.style.display = 'none';
-  });
-
-  // Close modal when clicking outside the modal
-  window.addEventListener('click', (event) => {
-      if (event.target === modal) {
+      // Close modal when clicking the close button
+      const closeButton = document.querySelector('.close');
+      closeButton.addEventListener('click', () => {
           modal.style.display = 'none';
-      }
-  });
+      });
+
+      // Close modal when clicking outside the modal
+      window.addEventListener('click', (event) => {
+          if (event.target === modal) {
+              modal.style.display = 'none';
+          }
+      });
+  }
 }
 
 // Add event listeners to "Learn More" links

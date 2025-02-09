@@ -1,0 +1,213 @@
+/* Form Styles */
+:root {
+  --primary-color: #3d405B;
+  --secondary-color: #e07a5f;
+  --active-color-1: #81b29a;
+  --active-color-2: #f2cc8f;
+  --letter-color: #f4f1de;
+  --white-bass-color: #fff;
+  box-sizing: border-box;
+}
+
+form {
+ width: 250px;
+ margin: 0 auto;
+}
+ 
+h1 {
+  text-align: center;
+}
+
+label {
+  display:block;
+  font-size: .8rem;
+  color: purple;
+  padding-top: .2rem;
+}
+
+input:required {border-left-color: #d70000;}
+input:focus {border-left-color: black; outline:none;}
+input:required:valid{border-left-color: green;}
+
+input, select, textarea {
+  display: block;
+  margin: .1rem 0 1rem 0 ;
+  padding: .3rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  border-left-width: 5px;
+  border-left-color:#555;
+  font-size: 1rem;
+  color: #3D405B;
+  width: 250px;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="submit"] {
+  border: none;
+  text-align: center;
+  background-color: #3D405B;
+  color: white;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #2a2c3d;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: #3D405B;
+}
+
+#results {
+  background-color: #F4F1DE;
+  padding: 1rem;
+  border: 1px solid #E07A5F;
+  border-radius: 6px;
+  max-width: 600px;
+  margin: 2rem auto; 
+  text-align: left; 
+}
+
+/* Membership Cards */
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.membership-card {
+  background-color: var(--active-color-2);
+  padding: .5rem 1rem .65rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.membership-card h3 {
+  margin-bottom: 0.5rem;
+  color: #3D405B;
+}
+
+.membership-card p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.membership-card a {
+  color: #E07A5F;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.membership-card a:hover {
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #3D405B;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.membership-card {
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.membership-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.membership-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.membership-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.join-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 700px;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 40px;
+  
+}

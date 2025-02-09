@@ -26,10 +26,13 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
     <!-- javascript file -->
-    <script src="scripts/chamber.js" type="module"></script>
+    <script defer src="scripts/thankyou.js" type="module"></script>
 </head>
 
 <body>
@@ -41,10 +44,10 @@
     </header>
     <nav>
         <ul class="menuLinks">
-            <li class="current-menu-item"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Discover</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
+            <li class="current-menu-item"><a href="join.html">Join</a></li>
         </ul>
     </nav>
     <main>
@@ -60,24 +63,8 @@
             </article>
         </section>
         <hr>
-        <div class="weather-container">
-            <section class="box events" aria-labelledby="events-heading">
-                <header class="header-box">
-                    <h2 id="events-heading">Events</h2>
-                </header>
-            </section>
-            <section class="box current-weather" aria-labelledby="current-weather-heading">
-                <header class="header-box">
-                    <h2 id="current-weather-heading">Current Weather</h2>
-                </header>
-            </section>
-            <section class="box weather-forecast" aria-labelledby="weather-forecast-heading">
-                <header class="header-box">
-                    <h2 id="weather-forecast-heading">Weather Forecast</h2>
-                </header>
-            </section>
-        </div>
-        <div id="cards-home"></div>
+        <div class="join-container">
+            
     </main>
     <footer>
         <div>

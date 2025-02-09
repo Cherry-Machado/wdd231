@@ -62,9 +62,64 @@
         </section>
         <hr>
         <br>
-        <h1 class="join-page" join>Join Page</h1>
+        <h1 class="join-page">Join Page</h1>
         <div class="join-container">
-
+            <form method="get" action="thankyou.html">
+                <label>First Name:
+                    <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+                <label>Last Name:
+                    <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+                <label>Organizational Title:
+                    <input type="text" name="title" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                </label>
+                <label>Email:
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email" required placeholder="example@domain.com">
+                </label>
+                <label>Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required placeholder="+5511954283340">
+                </label>
+                <label>Business/Organization Name:
+                    <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+                </label>
+                <label>Membership Level:
+                    <select name="membership" title="Select your membership level">
+                        <option value="NP Membership">NP Membership</option>
+                        <option value="Bronze Membership">Bronze Membership</option>
+                        <option value="Silver Membership">Silver Membership</option>
+                        <option value="Gold Membership">Gold Membership</option>
+                    </select>
+                </label>
+                <label>Business/Organization Description:
+                    <textarea name="description" rows="4" cols="50" placeholder="Enter a description of your business or organization"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <input type="submit" value="Join the Chamber">
+            </form>
+            <div class="membership-cards">
+                <div class="membership-card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations, no fee.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic membership with essential benefits.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced membership with additional benefits.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium membership with full benefits.</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div>

@@ -552,9 +552,9 @@ footer div h4 {
 /************* FORM STYLING *************/
 /* Form Styles */
 
- .oculta-title {
+  .oculta-title {
     display: none;
- }
+  }
 
   form {
    width: 250px;
@@ -734,7 +734,7 @@ footer div h4 {
   
   /* Modal Styles */
   .modal {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;

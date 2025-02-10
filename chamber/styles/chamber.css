@@ -552,9 +552,7 @@ footer div h4 {
 /************* FORM STYLING *************/
 /* Form Styles */
 
-  .oculta-join {
-    display: none;
-  }
+ 
   form {
    width: 250px;
    margin: 0 auto;

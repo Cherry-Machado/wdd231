@@ -552,9 +552,10 @@ footer div h4 {
 /************* FORM STYLING *************/
 /* Form Styles */
 
- .oculta {
+ .oculta-title {
     display: none;
  }
+
   form {
    width: 250px;
    margin: 0 auto;

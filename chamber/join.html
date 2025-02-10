@@ -74,8 +74,8 @@
                 <label>Organizational Title:
                     <input type="text" name="title" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                 </label>
-                <label>Email: 
-                    <input type="email" name="email" title="Enter your email address" autocomplete="email" required placeholder="example@domain.com">
+                <label>Email:
+                      <input type="email" name="email" title="Enter your email address" autocomplete="email" required placeholder="example@domain.com">
                 </label>
                 <label>Mobile Phone:
                     <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required placeholder="+5511964983941">
@@ -159,6 +159,10 @@
             <h2 id="modal-price"></h2>
         </div>
     </div> 
+    <script>
+        // Set the timestamp value when the page loads
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
 </body>
 
 </html>

@@ -561,10 +561,12 @@ footer div h4 {
   .joining-details {
     margin-top: 20px;
     text-align: center;
+    color: var(--primary-color);
   } 
   
   .thank-joining-message {
     text-align: center;
+    color: var(--primary-color);
   }
   
   .join-page {
@@ -613,6 +615,8 @@ footer div h4 {
     -webkit-appearance: none;
     appearance: none;
   }
+
+  
   
   input[type="submit"]:hover {
     background-color: #2a2c3d;
@@ -623,13 +627,43 @@ footer div h4 {
   }
   
   #results {
+    margin: 0 auto;
     background-color: #F4F1DE;
     padding: 1rem;
     border: 1px solid #E07A5F;
     border-radius: 6px;
     max-width: 600px;
-    margin: 2rem auto; 
+    /* margin: 2rem auto;  */
     text-align: left; 
+    display: flex;
+    flex-direction: column;
+    line-height: .1rem;
+    margin-bottom: 1rem;
+  }
+
+  #return-button {
+    border: none;
+    text-align: center;
+    background-color: #3D405B;
+    color: white;
+    border-radius: 1rem;
+     padding: .75rem 1.5rem;
+    text-align:center;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15rem;
+    align-self: center;
+    margin-top: 1rem;
+  }
+
+  #return-button:hover {
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px #000;
+    color: var(--primary-color);
+    text-shadow: 0px 0px 5px var(--white-bass-color);
+    background-color: var(--active-color-2);
   }
   
   /* Membership Cards */
@@ -659,7 +693,7 @@ footer div h4 {
     background-color: var(--secondary-color);
     padding: .4rem;
     color: var(--white-bass-color);
-    /* transform: translateY(-5px); */
+    transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
@@ -718,11 +752,7 @@ footer div h4 {
     padding: 2rem;
     border-radius: 8px;
     width: 20rem;
-    /* width: fit-content;
-    height: fit-content;
-    position: absolute;
-    top: 50%;
-    left: 50%; */
+    
   }
   
   .close {

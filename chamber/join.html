@@ -29,7 +29,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
     <!-- javascript file -->
-    <script defer src="scripts/chamber.js"></script>
+    <script src="scripts/chamber.js" type="module"></script>
     <script defer src="scripts/thankyou.js"></script>
 </head>
 
@@ -74,7 +74,7 @@
                 <label>Organizational Title:
                     <input type="text" name="title" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                 </label>
-                <label>Email:
+                <label>Email: 
                     <input type="email" name="email" title="Enter your email address" autocomplete="email" required placeholder="example@domain.com">
                 </label>
                 <label>Mobile Phone:
@@ -151,14 +151,14 @@
     </footer>
 
      <!-- Modal Structure -->
-     <div id="modal" class="modal">
+       <div id="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modal-title"></h2>
             <ul id="modal-benefits"></ul>
             <h2 id="modal-price"></h2>
         </div>
-    </div>
+    </div> 
 </body>
 
 </html>

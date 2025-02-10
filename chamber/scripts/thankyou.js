@@ -10,28 +10,7 @@ function validatePhone(phone) {
   return phoneRegex.test(phone);
 }
 
-// Function to extract and format form data
-function show(cup) {
-  let result = "";
-  formData.forEach((element) => {
-      if (element.startsWith(cup)) {
-          result = decodeURIComponent(element.split("=")[1].replace(/\+/g, " ")); // Decode URL-encoded values
-      }
-  });
-  return result;
-}
 
-// Function to format the date as mm/dd/yyyy
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  if (isNaN(date.getTime())) {
-      return "Invalid Date";
-  }
-  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
-  const day = String(date.getDate()).padStart(2, "0");
-  const year = date.getFullYear();
-  return `${month}/${day}/${year}`;
-}
 
 // Membership Levels Data
 const membershipLevels = [
@@ -61,6 +40,7 @@ const membershipLevels = [
   }
 ];
 
+
 // Function to show modal with membership benefits
 function showModal(level) {
   const modal = document.getElementById('modal');
@@ -82,6 +62,7 @@ function showModal(level) {
 
       // Close modal when clicking the close button
       const closeButton = document.querySelector('.close');
+      closeButton.textContent = '❌';
       closeButton.addEventListener('click', () => {
           modal.style.display = 'none';
       });
@@ -92,16 +73,25 @@ function showModal(level) {
               modal.style.display = 'none';
           }
       });
+  } else {
+      console.error("Selected level not found in membershipLevels array.");
   }
 }
 
+
+
+
 // Add event listeners to "Learn More" links
 document.querySelectorAll('.learn-more').forEach(link => {
-  link.addEventListener('click', (e) => {
+    link.addEventListener('click', (e) => {
+
+      const activarModal = document.querySelector("#modal");
+      activarModal.classList.add("modal");
       e.preventDefault();
       const level = e.target.closest('.membership-card').getAttribute('data-level');
       showModal(level);
-  });
+
+    });
 });
 
 // Grab the entire URL for this page including the attached GET values
@@ -112,6 +102,29 @@ const everything = currentUrl.split("?");
 
 // Grab just the second half
 let formData = everything[1].split("&");
+
+// Function to extract and format form data
+function show(cup) {
+  let result = "";
+  formData.forEach((element) => {
+      if (element.startsWith(cup)) {
+          result = decodeURIComponent(element.split("=")[1].replace(/\+/g, " ")); // Decode URL-encoded values
+      }
+  });
+  return result;
+}
+
+// Function to format the date as mm/dd/yyyy
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) {
+      return "Invalid Date";
+  }
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  const day = String(date.getDate()).padStart(2, "0");
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
+}
 
 // Display the form data
 document.getElementById('first-name').textContent = show("first");

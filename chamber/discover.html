@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo Chamber of Commerce</title>
+    <meta name="description"
+        content="WDD 231 - Web Frontend Development I | Cherry Machado | This is my São Paulo Chamber of Commerce Website.">
+    <meta name="author" content="Cherry Machado">
+    <!-- Meta Tags-->
+    <meta property="og:title" content="São Paulo Chamber of Commerce Website - Cherry Machado">
+    <meta property="og:description"
+        content="WDD 231 - Web Frontend Development I | Cherry Machado | This is my São Paulo Chamber of Commerce Website.">
+    <meta property="og:image" content="https://cherry-machado.github.io/wdd231/chamber/images/Chambers_SP.jpg">
+    <meta property="og:url" content="https://cherry-machado.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    <!-- End Meta Tags -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <!-- javascript file -->
+    <script src="scripts/chamber.js" type="module"></script>
+    <script defer src="scripts/thankyou.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/chamber-logo.png" alt="Logo of Sao Paulo Chamber of Commerce" width="50" height="50"
+            loading="lazy">
+        <h1 class="header__title">São Paulo<br>Chamber of Commerce</h1>
+        <button id="myButton" title="menuLinksButton"></button>
+    </header>
+    <nav>
+        <ul class="menuLinks">
+            <li><a href="index.html">Home</a></li>
+            <li class="current-menu-item"><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="oculta-title">Discover Page</h1>
+        <section class="hero">
+            <article class="hero-content">
+                <h2 class="hero-content-title"><span class="welcome">Welcome</span> to the<br> São Paulo Chamber of
+                    Commerce</h2>
+                <p class="hero-content-paragraph">The site to know about our organization, our community, and our
+                    members.</p>
+                <div class="hero-content-btn">
+                    <a href="#" class="btn">Join Us</a>
+                </div>
+            </article>
+        </section>
+        <hr>
+        <br>
+        <h1 class="join-page">Discover Page</h1>
+        <div class="join-container">
+           
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h4>São Paulo Chamber of Commerce</h4>
+            <p>R. Boa Vista, 51 - Centro Histórico de São Paulo, São Paulo - SP, 17190-005</p>
+            <p>info@spchamberoc.org</p>
+            <p>Phone:+55 (11) 3180-3180</p>
+        </div>
+        <div class="footer__socialmedia">
+            <a href="https://facebook.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-facebook.svg" class="footer__icon" alt="logo facebook" loading="lazy">
+            </a>
+            <a href="https://youtube.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-youtube.svg" class="footer__icon" alt="logo youtube" loading="lazy">
+            </a>
+            <a href="https://x.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-twitter.svg" class="footer__icon" alt="logo twitter" loading="lazy">
+            </a>
+            <a href="https://instagram.com" class="footer__media" target="_blank" rel="noopener">
+                <img src="./images/icon-instagram.svg" class="footer__icon" alt="logo instagram" loading="lazy">
+            </a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Cherry Machado</p>
+            <p>&copy; 2025 São Paulo Chamber of Commerce</p>
+            <p id="lastModified"><span id="currentyear"></span></p>
+        </div>
+    </footer>
+
+     <!-- Modal Structure -->
+       <div id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <ul id="modal-benefits"></ul>
+            <h2 id="modal-price"></h2>
+        </div>
+    </div> 
+    <script>
+        // Set the timestamp value when the page loads
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+</body>
+
+</html>

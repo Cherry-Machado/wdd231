@@ -6,4 +6,19 @@
         "photograph description"
         "photograph location";
        }
+
+    .discover-container img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .discover-container img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .discover-container img:hover {
+        transform: scale(1.05); /* Slightly enlarge the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    }
+    
 }

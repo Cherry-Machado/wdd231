@@ -850,6 +850,8 @@ footer div h4 {
   }
 
   .discover-container div h2 {
+    color: var(--primary-color);
+    font-family: "Poetsen One", sans-serif;
     margin: 1rem 10px;
     grid-area: name;
   }
@@ -860,6 +862,7 @@ footer div h4 {
   }
 
   .discover-container div p {
+    font-family: "Roboto", sans-serif;
     margin: 1rem 10px;
     grid-area: description;
   }
@@ -868,6 +871,45 @@ footer div h4 {
     margin: 1rem 10px;
     grid-area: location;
   }
+
+  .discover-container button {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: var(--primary-color);
+    padding: .5rem;
+    color: var(--letter-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 0px  0px 8px;
+  }
+
+  .discover-container button:hover {
+   
+    background-color: var(--active-color-1);
+    color: var(--primary-color);
+    font-weight:800;
+    text-shadow: 0px 0px 6px var(--letter-color);
+   
+  }
+
+  /* Style for the last visit message */
+.last-visit-message {
+    width: fit-content;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f4f1de;
+    border: 1px solid #e07a5f;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #3d405b;
+}
+
+.title-last-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
 
 /************ Larger Screen *************/
 @media only screen and (min-width: 65rem) {

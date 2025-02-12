@@ -4,7 +4,7 @@ export const places =[
     {
       "name": "Avenida Paulista",
       "address": "Avenida Paulista, São Paulo, SP",
-      "description": "A bustling avenue known for its cultural institutions, shopping centers, and vibrant street life. Key attractions include the São Paulo Museum of Art (MASP) and various cultural centers.",
+      "description": "A bustling avenue known for its cultural institutions, shopping centers, and vibrant street life. Key attractions include the São Paulo Museum of Art (MASP).",
       "cost": "Free to explore; individual attractions may have entry fees.",
       "photo_link": "photo-avenida-paulista.webp"
     },
@@ -16,7 +16,7 @@ export const places =[
       "photo_link": "photo-beco-do-batman.webp"
     },
     {
-      "name": "Mercado Municipal (Municipal Market)",
+      "name": "Municipal Market",
       "address": "Rua da Cantareira, 306, Centro, São Paulo, SP",
       "description": "A historic market famous for its diverse food offerings, including the iconic mortadella sandwich and pastel de bacalhau (codfish pastry).",
       "cost": "Free to enter; food prices vary.",
@@ -30,7 +30,7 @@ export const places =[
       "photo_link": "photo-liberdade-distric.webp"
     },
     {
-      "name": "Morumbi Stadium (Estádio do Morumbi)",
+      "name": "Morumbi Stadium",
       "address": "Praça Roberto Gomes Pedrosa, 1, Morumbi, São Paulo, SP",
       "description": "Home to São Paulo FC, this stadium offers tours and hosts thrilling football matches.",
       "cost": "Match tickets and tour prices vary.",

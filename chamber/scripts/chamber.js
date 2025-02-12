@@ -3,9 +3,7 @@ import { displayMembers } from "./displayMembers.js";
 import { displayMembersHome } from "./displayMembersHome.js";
 import { initializeForecastApp } from "./weather-forecast-app.js";
 import { initializeCurrentWeatherApp } from "./current-weather-app.js";
-import { places } from "../data/places.mjs";
 
-console.log(places);
 
 // Dynamically update the year and date of last modification
 window.onload = () => {

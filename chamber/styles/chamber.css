@@ -832,6 +832,43 @@ footer div h4 {
     
   }
 
+  /********** DISCOVER PAGE ***********/
+
+  .discover-container div {
+   margin: 1rem 8px;
+   border: 1px solid #999;
+   background-color: var(--letter-color);
+   border-radius: 8px;
+   overflow: hidden;
+
+   display: grid;
+   grid-template-areas:
+   "name"
+   "photograph"
+   "description"
+   "location";
+  }
+
+  .discover-container div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+  }
+
+  .discover-container img {
+    width: 100%;
+    grid-area: photograph;
+  }
+
+  .discover-container div p {
+    margin: 1rem 10px;
+    grid-area: description;
+  }
+
+  .discover-container div address {
+    margin: 1rem 10px;
+    grid-area: location;
+  }
+
 /************ Larger Screen *************/
 @media only screen and (min-width: 65rem) {
     #myButton {

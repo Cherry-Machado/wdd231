@@ -20,3 +20,7 @@ This is my Chamber Home Page: https://cherry-machado.github.io/wdd231/chamber/in
 # Week 04
 
 This is my Join Page: https://cherry-machado.github.io/wdd231/chamber/join.html
+
+# Week 05
+
+This is the Website Plan of my final project: https://cherry-machado.github.io/wdd231/websiteplan.html

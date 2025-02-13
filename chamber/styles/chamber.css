@@ -380,6 +380,18 @@ footer div h4 {
     background-color: var(--active-color-1);
     overflow-wrap: break-word;
     overflow-x: auto;
+    
+}
+
+.events ul {
+    font-family: "Roboto", sans-serif;
+    color: #17192b;
+    font-weight: 500;
+}
+
+.events ul li {
+    padding: .3rem;
+    
 }
 
 .current-weather {

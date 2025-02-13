@@ -856,6 +856,10 @@ footer div h4 {
     grid-area: name;
   }
 
+  .discover-page {
+    font-size: x-large;
+  }
+
   .discover-container img {
     width: 100%;
     grid-area: photograph;
@@ -898,16 +902,18 @@ footer div h4 {
     width: fit-content;
     margin: 1rem 0;
     padding: 1rem;
-    background-color: #f4f1de;
-    border: 1px solid #e07a5f;
+    background-color: var(--active-color-2);
+    border: rgba(0, 0, 0, 1);
     border-radius: 6px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     color: #3d405b;
 }
 
 .title-last-time {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 

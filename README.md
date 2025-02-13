@@ -24,3 +24,5 @@ This is my Join Page: https://cherry-machado.github.io/wdd231/chamber/join.html
 # Week 05
 
 This is the Website Plan of my final project: https://cherry-machado.github.io/wdd231/websiteplan.html
+
+This is my Discover page: https://cherry-machado.github.io/wdd231/chamber/discover.html

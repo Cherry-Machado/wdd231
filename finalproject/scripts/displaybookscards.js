@@ -1,65 +1,67 @@
-export const displayBooksCards = (books) => {
+export const displayBooksCards = (data) => {
+    const books = data.results.lists[0].books;
 
-  // Show the selected members
-  books.forEach((book) => {
-    while (book.num_results <= 15) {
-      const businesscard = document.createElement("article");
-      const businesscontent = document.createElement("div");
-      const businessheading = document.createElement("h3");
-      const tagline = document.createElement("p");
-      const memberinfo = document.createElement("div");
-      const memberimage = document.createElement("figure");
-      const businessicon = document.createElement("img");
-      const details = document.createElement("address");
-      const adress = document.createElement("p");
-      const phone = document.createElement("p");
-      const memWebsite = document.createElement("p");
+    books.forEach((book, index) => {
+        const position = index + 1;
+        let cardClass;
 
-      //Add classes
-      businesscard.classList.add("box", "business-card");
-      businesscontent.classList.add("business-content");
-      businessheading.classList.add("business-heading");
-      tagline.classList.add("tagline");
-      memberinfo.classList.add("member-info");
-      memberimage.classList.add("member-image");
-      details.classList.add("details");
+        // Determinar la clase del card según la posición
+        if (position <= 3) {
+            cardClass = `bestbook__card${position}`;
+        } else {
+            cardClass = `bestbook2__card${position}`;
+        }
 
-      // Configuring image attributes
-      businessicon.setAttribute("src", `../chamber/images/${member.icon}`);
-      businessicon.setAttribute("alt", `Logo of ${member.name}`);
-      businessicon.setAttribute("loading", "lazy");
+        // Seleccionar el elemento del DOM
+        const card = document.querySelector(`.${cardClass}`);
+        if (!card) {
+            console.error(`Card ${cardClass} no encontrado`);
+            return;
+        }
 
-      businessicon.setAttribute("aria-labelledby", "business-heading");
+        // Inyectar datos en los elementos del card
+        const injectData = (selector, content) => {
+            const element = card.querySelector(selector);
+            if (element) element.textContent = content;
+        };
 
-      //Configuring content
-      businessheading.textContent = member.name;
-      adress.innerHTML = `<span>ADRESS: </span> ${member.address}`;
-      phone.innerHTML = `<span>PHONE: </span><a href="tel:${member.phone}">${member.phone}</a>`;
-      memWebsite.innerHTML = `URL: <a href="${member.website}">${member.website}</a>`;
+        // Posición (sobre la imagen)
+        const positionElement = card.querySelector('.bestbook__position');
+        if (positionElement) positionElement.textContent = `#${position}`;
 
-      let membershipLevel = "";
-      switch (member.membership_level) {
-        case 2:
-          membershipLevel = "Silver";
-          break;
-        case 3:
-          membershipLevel = "Gold";
-          break;
-      }
-      tagline.textContent = `Membership level: ${membershipLevel}`;
+        // Imagen
+        const img = card.querySelector('.bestbook__picture');
+        if (img) {
+            img.src = book.book_image;
+            img.alt = book.title;
+        }
 
-      // Append elements to the DOM
-      memberimage.appendChild(businessicon);
-      details.appendChild(adress);
-      details.appendChild(phone);
-      details.appendChild(memWebsite);
-      memberinfo.appendChild(memberimage);
-      memberinfo.appendChild(details);
-      businesscontent.appendChild(businessheading);
-      businesscontent.appendChild(tagline);
-      businesscontent.appendChild(memberinfo);
-      businesscard.appendChild(businesscontent);
-      cards.appendChild(businesscard);
-    }
-  });
+        // Semanas en la lista
+        injectData('.bestbook__weeks', `${book.weeks_on_list} weeks on list`);
+
+        // Título, autor y descripción
+        injectData('.bestbook__title', book.title);
+        injectData('.bestbook__author', `by ${book.author}`);
+        injectData('.bestbook__description', book.description);
+
+        // Selector de compra
+        const select = card.querySelector('select');
+        if (select) {
+            // Limpiar opciones existentes
+            select.innerHTML = '<option value="" disabled selected>BUY ▼</option>';
+            
+            // Añadir opciones de compra
+            book.buy_links.forEach(link => {
+                const option = document.createElement('option');
+                option.value = link.url;
+                option.textContent = link.name;
+                select.appendChild(option);
+            });
+
+            // Redirigir al seleccionar
+            select.addEventListener('change', () => {
+                if (select.value) window.open(select.value, '_blank');
+            });
+        }
+    });
 };

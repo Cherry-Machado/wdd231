@@ -1,9 +1,22 @@
 export const displayBooksCards = (data) => {
-    const books = data.results.lists[0].books;
+    if (!data || !data.results || !data.results.lists || !data.results.lists[0].books) {
+        console.error("Datos de la API no válidos:", data);
+        return;
+    }
+
+    let books = data.results.lists[0].books;
 
     books.forEach((book, index) => {
         const position = index + 1;
         let cardClass;
+        if (position > 5 && position < 11) 
+        {
+            books= data.results.lists[1].books;
+        };
+        if (position > 10 && position< 16) 
+        {
+            books= data.results.lists[13].books;
+        };
 
         // Determinar la clase del card según la posición
         if (position <= 3) {
@@ -15,7 +28,7 @@ export const displayBooksCards = (data) => {
         // Seleccionar el elemento del DOM
         const card = document.querySelector(`.${cardClass}`);
         if (!card) {
-            console.error(`Card ${cardClass} not found`);
+            console.error(`Card ${cardClass} no encontrado`);
             return;
         }
 

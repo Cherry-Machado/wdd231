@@ -10,9 +10,10 @@ export async function getNytBestSellers() {
     if (!response.ok) throw new Error("Mistake getting data from server!");
 
     const data = await response.json();
-    console.log(data);
+    console.log("Datos de la API:", data);
     return data;
   } catch (error) {
+    console.error("Error en getNytBestSellers:", error);
     throw error;
   }
 }

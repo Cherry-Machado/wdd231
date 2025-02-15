@@ -1,5 +1,5 @@
 import { getNytBestSellers } from './apinytbookshub.js';
-import { displayBooksCards } from './displaybookscards.js';
+import { displayBooksCards } from './displaybestbookscards.js';
 import { initializeBuyOptions } from './buybestbooks.js';
 
 async function initializeApp() {

@@ -15,7 +15,7 @@ export const displayBooksCards = (data) => {
         // Seleccionar el elemento del DOM
         const card = document.querySelector(`.${cardClass}`);
         if (!card) {
-            console.error(`Card ${cardClass} no encontrado`);
+            console.error(`Card ${cardClass} not found`);
             return;
         }
 

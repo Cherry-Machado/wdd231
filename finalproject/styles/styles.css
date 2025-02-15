@@ -68,7 +68,7 @@ body{
     font-size: 4rem;
 }
 
-.hero__copy{
+.hero__comment{
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -178,22 +178,22 @@ body{
     text-decoration: none;
 }
 
-/* Portfolio section */
+/* bestbook section */
 
-.portfolio{
+.bestbook{
     background-color: rgb(245, 240, 235);
 }
 
 
 
-.portfolio__cards{
+.bestbook1__cards{
     display: flex;
     padding: 40px 0;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.portfolio__card{
+.bestbook__card{
     width: 27%;
     background: #fff;
     height: auto;
@@ -201,14 +201,14 @@ body{
     border-radius: 10px;
 }
 
-.portfolio2__cards{
+.bestbook2__cards{
     display: flex;
     padding: 1rem 0;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.portfolio2__card{
+.bestbook2__card{
     width: 23%;
     background: #fff;
     height: auto;
@@ -217,7 +217,7 @@ body{
     margin-bottom: 1rem;
 }
 
-.portfolio__picture{
+.bestbook__picture{
     width: 100%;
     display: block;
     border-radius: 10px 10px 0 0;
@@ -225,23 +225,23 @@ body{
     object-fit: cover;
 }
 
-.portfolio__texts{
+.bestbook__texts{
     padding: 30px 20px 40px;
 }
 
-.portfolio__title{
+.bestbook__title{
     font-size: 1.5rem;
     text-align: center;
     color: var(--color-secondary);
     margin: 0;
 }
 
-.portfolio__paragraph{
+.bestbook__paragraph{
     font-weight: 300;
     margin: 30px 0;
 }
 
-.portfolio__cta{
+.bestbook__cta{
     display: block;
     background: var(--color-secondary);
     padding: 15px 0;
@@ -252,13 +252,13 @@ body{
     text-decoration: none;
 }
 
-/* Copy section */
+/* comment section */
 
-.copy{
+.comment{
     background: var(--color-primary);
 }
 
-.copy__texts{
+.comment__texts{
     --color-primary:#fff;
     text-align: center;
 }
@@ -268,15 +268,15 @@ body{
     margin: 0;
 }
 
-.copy__texts figure {
+.comment__texts figure {
     text-align: center;
 }
-.copy__texts figure img {
+.comment__texts figure img {
     border-radius: 50%;
     width: 10rem;
 }
 
-.copy__texts p {
+.comment__texts p {
     color: var(--color-primary);
 }
 
@@ -421,14 +421,14 @@ body{
         width: 100%;
     }
 
-    /* Section portfolio */
+    /* Section bestbook */
 
-    .portfolio__card{
+    .bestbook__card{
         width: 45%;
         margin-bottom: 30px;
     }
 
-    .portfolio2__card{
+    .bestbook2__card{
         width: 45%;
         margin-bottom: 30px;
     }
@@ -482,12 +482,12 @@ body{
         width: 100%;
     }
 
-    .portfolio__card{
+    .bestbook__card{
         width: 90%;
         max-width: 300px;
     }
 
-    .portfolio2__card{
+    .bestbook2__card{
         width: 90%;
         max-width: 300px;
     }

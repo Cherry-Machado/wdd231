@@ -357,7 +357,13 @@ body{
     width: 90%;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 67rem){
+    .nav__container {
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 50rem){
     .hero{
         height: auto;
         min-height: 100vh;
@@ -383,6 +389,10 @@ body{
 
     .hero__title{
         font-size: 3.5rem;
+    }
+
+    .nav__container {
+        flex-direction: column;
     }
 
     /* Section about */

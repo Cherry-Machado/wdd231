@@ -1,22 +1,20 @@
 export const displayBooksCards = (data) => {
-    if (!data || !data.results || !data.results.lists || !data.results.lists[0].books) {
+    if (!data || !data.results || !data.results.lists) {
         console.error("Datos de la API no válidos:", data);
         return;
     }
 
-    let books = data.results.lists[0].books;
+    // Obtener las listas de libros
+    const list1 = data.results.lists[0].books; // Primeros 5 libros
+    const list2 = data.results.lists[1].books; // Siguientes 5 libros
+    const list3 = data.results.lists[6].books; // Últimos 5 libros
 
-    books.forEach((book, index) => {
+    // Combinar todas las listas en un solo array
+    const allBooks = [...list1, ...list2, ...list3];
+
+    allBooks.forEach((book, index) => {
         const position = index + 1;
         let cardClass;
-        if (position > 5 && position < 11) 
-        {
-            books= data.results.lists[1].books;
-        };
-        if (position > 10 && position< 16) 
-        {
-            books= data.results.lists[13].books;
-        };
 
         // Determinar la clase del card según la posición
         if (position <= 3) {

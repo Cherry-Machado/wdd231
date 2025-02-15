@@ -16,3 +16,5 @@ export async function getNytBestSellers() {
     throw error;
   }
 }
+
+document.querySelector()

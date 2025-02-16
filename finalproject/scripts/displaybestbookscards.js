@@ -7,7 +7,7 @@ export const displayBooksCards = (data) => {
     // Obtener las listas de libros
     const list1 = data.results.lists[0].books; // Primeros 5 libros
     const list2 = data.results.lists[1].books; // Siguientes 5 libros
-    const list3 = data.results.lists[6].books; // Últimos 5 libros
+    const list3 = data.results.lists[7].books; // Últimos 5 libros
 
     // Combinar todas las listas en un solo array
     const allBooks = [...list1, ...list2, ...list3];

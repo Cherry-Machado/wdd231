@@ -495,9 +495,6 @@ textarea:valid{border-left-color: green;}
     text-align: center; 
 }
 
-.contact_cta_extra {
-    background-color: var(--color-primary);
-}
 
 .highlight {
     color: #e74c3c;
@@ -527,13 +524,38 @@ textarea:valid{border-left-color: green;}
 }
 
 .footer__texts{
+    justify-items: center;
     text-align: center;
     width: 50%;
 }
 
 .footer__texts a {
+    
     text-decoration: none;
 }
+
+.footer__texts h2 {
+    background-color: #6C63FF;
+    width:16rem;
+    padding: 1rem;
+    color: #fff;
+    outline: none;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    text-align: center; 
+}
+
+.footer__texts h2:hover {
+   
+    color: #e74c3c;
+    background-color: #fff;
+   
+}
+
+
 
 .footer__icon{
     display: inline-block;

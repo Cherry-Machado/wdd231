@@ -11,19 +11,6 @@ hamburguerElement.addEventListener("click", () => {
   hamburguerElement.classList.toggle("open");
 });
 
-const currentOptionHome = document.querySelector(".home-menu");
-const currentOptionAbout = document.querySelector(".about-menu");
-
-currentOptionHome.addEventListener("click", () => {
-    currentOptionAbout.classList.remove("current-menu-item");
-    currentOptionHome.classList.add("current-menu-item");
-});
-
-currentOptionAbout.addEventListener("click", () => {
-    currentOptionAbout.classList.add("current-menu-item");
-    currentOptionHome.classList.remove("current-menu-item");
-});
-
 async function initializeApp() {
     try {
         const data = await getNytBestSellers();

@@ -26,71 +26,48 @@ async function initializeApp() {
 initializeApp();
 
 document.addEventListener('DOMContentLoaded', function() {
+    // DOM Elements
     const form = document.getElementById('contact__form');
     const countryInput = document.getElementById('countryInput');
     const countryList = document.getElementById('countryList');
-    const countryCodeInput = document.getElementById('countryCode');
     const countryError = document.getElementById('countryError');
 
-    // Inject countries into the datalist
+    // Fill datalist with countries
     countries.forEach(country => {
         const option = document.createElement('option');
-        option.value = country.name; 
+        option.value = country.name;
         option.dataset.code = country.code;
-        //option.setAttribute('data-code', country.code); // Country coode hide
         countryList.appendChild(option);
     });
 
-    // Handle user selection
+
+    // Real time validation
     countryInput.addEventListener('input', () => {
         const inputValue = countryInput.value.trim();
         const isValid = countries.some(country => 
             country.name.toLowerCase() === inputValue.toLowerCase()
         );
         
+        countryError.textContent = isValid ? '' : 'Please select a valid country from the list';
         countryError.style.display = isValid ? 'none' : 'block';
         countryInput.setCustomValidity(isValid ? '' : 'Invalid country');
     });
 
-    /*countryInput.addEventListener('input', () => {
-        const inputValue = countryInput.value.toLowerCase();
-        const found = countries.find(c => c.name.toLowerCase() === inputValue);
-        countryCodeInput.value = found ? found.code : '';
-    });*/
-
-    /*countryInput.addEventListener('input', function() {
-        const inputValue = this.value.toLowerCase();
-        const matchedCountry = countries.find(country => 
-            country.name.toLowerCase() === inputValue
+    // Validation when sending
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const inputValue = countryInput.value.trim();
+        const isValid = countries.some(country => 
+            country.name.toLowerCase() === inputValue.toLowerCase()
         );
 
-        // Update the hidden field with the country code
-        if (matchedCountry) {
-            countryCodeInput.value = matchedCountry.code;
-        } else {
-            countryCodeInput.value = '';
-        }*/
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const inputValue = countryInput.value.trim();
-            const selectedCountry = countries.find(country => 
-                country.name.toLowerCase() === inputValue.toLowerCase()
-            );
-    
-            if (!selectedCountry) {
-                countryError.textContent = 'Please select a valid country from the list';
-                countryError.style.display = 'block';
-                countryInput.focus();
-                return;
-            }
-    
-            
-        });
-        // If it's ok, send the form
-        countryError.style.display = 'none';
-        console.log('Submitting form with country:', selectedCountry);
-        form.submit();
+        if (!isValid) {
+            countryError.style.display = 'block';
+            countryInput.focus();
+            return;
+        }
         
+        form.submit();
+    });
 });
+

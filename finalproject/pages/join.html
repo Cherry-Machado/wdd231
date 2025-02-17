@@ -61,10 +61,10 @@
 
             <form class="contact__form" method="get" action="jointhankyou.html">
                 <h2 class="contact__title">Together, we can achive more!</h2>
-                <label>First Name:
+                <label><span class="label-text">First Name:</span>
                     <input type="text" name="first" title="Enter your first name" autocomplete="given-name" class="contact__input" required>
                 </label>
-                <label>Last Name:
+                <label><span class="label-text">Last Name:</span>
                     <input type="text" name="last" title="Enter your last name" autocomplete="family-name" class="contact__input" required>
                 </label>
                 <label><span class="label-text">Enter your Email:</span>
@@ -78,14 +78,14 @@
                     <input type="hidden" id="countryCode" name="country_code">
                     <div id="countryError"></div>
                 </label>
-                <label>Mobile Phone:
+                <label><span class="label-text">Mobile Phone:</span>
                     <input class="contact__input" type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" placeholder="+5511964983941">
                 </label>
-                <label>Business/Organization Name:
-                    <input class="contact__input" type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+                <label><span class="label-text">Business/Organization Name:</span>
+                    <input class="contact__input" type="text" name="organization" title="Enter your business or organization name" autocomplete="organization">
                 </label>
                 <input type="hidden" name="timestamp" id="timestamp" value="">
-                <button type="submit" class="contact__cta">Join us now!</button>
+                <button type="submit" class="join__cta contact__cta">Join us now!</button>
             </form>
         </section>
     </main>

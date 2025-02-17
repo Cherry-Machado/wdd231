@@ -495,7 +495,10 @@ textarea:valid{border-left-color: green;}
     text-align: center; 
 }
 
-
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+}    
 .contact__cta:hover {
     background-color: #6C63FF;
     color: #fff;

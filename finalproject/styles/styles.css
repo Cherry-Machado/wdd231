@@ -490,13 +490,11 @@ textarea:valid{border-left-color: green;}
     border-radius: 8px;
     font-weight: 700;
     margin-bottom: 2rem;
-    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5) 
+    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    text-align: center; 
 }
 
-.contactthanks_cta {
-    text-decoration: none;
-    text-align: center;
-}
 
 .contact__cta:hover {
     background-color: #6C63FF;

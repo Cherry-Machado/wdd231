@@ -57,18 +57,23 @@
                 <img src="../images/undraw_reading-time_gcvc.svg" class="contact__img" alt="photo woman reading" loading="lazy">
             </figure>
     
-            <form class="contact__form" method="get">
+            <form class="contact__form" action="https://formsubmit.co/048862113742524d461ac9e269ddb0c5" method="POST">
                 <h2 class="contact__title">We keep in touch</h2>
-                <label>Enter your Name:
-                    <input type="text" name="name" title="Enter your Name" placeholder="Jhon Wyne" autocomplete="name" class="contact__input" required>
+                <label><span class="label-text">Enter your Name:</span>
+                    <input type="text" name="name" title="Enter your Name" placeholder="Ex: Jhon Wyne" autocomplete="name" class="contact__input" required>
                 </label>
-                <label>Enter your Email:
+                <label><span class="label-text">Enter your Email:</span>
                     <input type="email" name="email" title="Enter your email address" placeholder="example@domain.com" class="contact__input" required>
                 </label>
-                <label>Write your Message:
+                <label><span class="label-text">Write your Message:</span>
                     <textarea name="Message" placeholder="Message..." class="contact__input contact__input--area"></textarea>
                 </label>
                 <button type="submit" class="contact__cta">Contact us now!</button>
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New submission!">
+                <input type="hidden" name="_autoresponse" value="Thanks for contact NYTBooksHub! We received your message.">
+                <input type="hidden" name="_next" value="https://http://http://127.0.0.1:5501/">
             </form>
         </section>
     </main>

@@ -287,17 +287,12 @@ main h1 {
     font-size: small;
 }
 .bestbook__texts{
-    /* text-align: center; */
      padding: 0rem 1rem 0rem;  
 }
 
 .bestbook__title{
-    /* font-size: 1.4rem;
-    color: #1b998b;
-    margin: 10px 0; */
-    /* font-size: 1.2rem; */
+    
     text-align: left;
-   /* color: #000000;*/
    
     color: #4a4747;
     background: #bababa;
@@ -599,6 +594,17 @@ textarea:valid{border-left-color: green;}
 
 .footer__picture{
     width: 90%;
+}
+
+.footer__nav a{
+    transition: transform 0.3s;
+}
+
+.footer__nav a:hover {
+    -moz-transform: scale(130%);
+    -wekit-transform: scale(130%);
+    -o-transform: scale(130%);
+    transform: scale(130%);
 }
 
 #myButton {

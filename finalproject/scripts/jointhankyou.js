@@ -54,6 +54,6 @@ function validateEmail(email) {
   document.getElementById('timestamp').textContent = formatDate(show("timestamp"));
   
   // Add event listener for the return button
-  document.getElementById('return-button').addEventListener('click', () => {
+  document.querySelector('.contact__cta').addEventListener('click', () => {
     window.location.href = "../index.html"; // Redirect to the form page
   });

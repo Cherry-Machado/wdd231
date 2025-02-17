@@ -1,5 +1,5 @@
 // countries.js
-const countries = [
+export default [
     { name: "Afghanistan", code: "AF" },
     { name: "Åland Islands", code: "AX" },
     { name: "Albania", code: "AL" },

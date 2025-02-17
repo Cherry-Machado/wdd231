@@ -1,7 +1,7 @@
 import { getNytBestSellers } from './apinytbookshub.js';
 import { displayBooksCards } from './displaybestbookscards.js';
 import { initializeBuyOptions } from './buybestbooks.js';
-import './countries.js';
+import countries from './countries.js';
 
 // hamburguerElement.addEventListener("click") callback
 const hamburguerElement = document.querySelector("#myButton");
@@ -33,13 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inject countries into the datalist
     countries.forEach(country => {
         const option = document.createElement('option');
-        option.value = country.name; // Valor visible para el usuario
-        option.setAttribute('data-code', country.code); // Código del país (oculto)
+        option.value = country.name; 
+        option.dataset.code = country.code;
+        //option.setAttribute('data-code', country.code); // Country coode hide
         countryList.appendChild(option);
     });
 
     // Handle user selection
-    countryInput.addEventListener('input', function() {
+    countryInput.addEventListener('input', () => {
+        const inputValue = countryInput.value.toLowerCase();
+        const found = countries.find(c => c.name.toLowerCase() === inputValue);
+        countryCodeInput.value = found ? found.code : '';
+    });
+    
+    /*countryInput.addEventListener('input', function() {
         const inputValue = this.value.toLowerCase();
         const matchedCountry = countries.find(country => 
             country.name.toLowerCase() === inputValue
@@ -50,6 +57,5 @@ document.addEventListener('DOMContentLoaded', function() {
             countryCodeInput.value = matchedCountry.code;
         } else {
             countryCodeInput.value = '';
-        }
-    });
+        }*/
 });

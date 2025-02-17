@@ -57,11 +57,17 @@
                 <img src="../images/undraw_reading-time_gcvc.svg" class="contact__img" alt="photo woman reading" loading="lazy">
             </figure>
     
-            <form class="contact__form">
+            <form class="contact__form" method="get">
                 <h2 class="contact__title">We keep in touch</h2>
-                <input type="text" placeholder="Enter your name:" class="contact__input">
-                <input type="email" placeholder="Enter your email:" class="contact__input">
-                <textarea placeholder="Message..." class="contact__input contact__input--area"></textarea>
+                <label>Enter your Name:
+                    <input type="text" name="name" title="Enter your Name" placeholder="Jhon Wyne" autocomplete="name" class="contact__input" required>
+                </label>
+                <label>Enter your Email:
+                    <input type="email" name="email" title="Enter your email address" placeholder="example@domain.com" class="contact__input" required>
+                </label>
+                <label>Write your Message:
+                    <textarea name="Message" placeholder="Message..." class="contact__input contact__input--area"></textarea>
+                </label>
                 <button type="submit" class="contact__cta">Contact us now!</button>
             </form>
         </section>

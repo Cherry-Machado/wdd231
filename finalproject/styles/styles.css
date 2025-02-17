@@ -684,6 +684,11 @@ textarea:valid{border-left-color: green;}
     
     }
 
+    .contact__title::after {
+        
+        margin-top: 6px;
+    }
+
     .contact__form {
         grid-column:  1/-1;
         grid-row: 2/3;

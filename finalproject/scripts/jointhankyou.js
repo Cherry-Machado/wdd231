@@ -12,6 +12,7 @@ function validateEmail(email) {
   
   // Grab the entire URL for this page including the attached GET values
   const currentUrl = window.location.href;
+  console.log(currentUrl);
   
   // Divide the URL into two halves
   const everything = currentUrl.split("?");
@@ -50,7 +51,7 @@ function validateEmail(email) {
   document.getElementById('country').textContent = show("country");
   document.getElementById('phone').textContent = show("phone");
   document.getElementById('organization').textContent = show("organization");
- 
+  document.getElementById('timestamp').textContent = formatDate(show("timestamp"));
   
   // Add event listener for the return button
   document.getElementById('return-button').addEventListener('click', () => {

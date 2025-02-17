@@ -430,7 +430,7 @@ select {
     place-self: center;
     display: grid;
     width: 70%;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .contact__title {
@@ -510,12 +510,20 @@ textarea:valid{border-left-color: green;}
     display: none;
 }
 
-#countryInput:invalid {
-    border-color: #dc3545
+.suggestions-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    display: none; /* Oculto por defecto */
 }
 
-#countryInput:valid {
-    border-color: #28a745
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
 }
 
 /* Footer section */

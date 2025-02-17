@@ -502,6 +502,22 @@ textarea:valid{border-left-color: green;}
     cursor: pointer;
 }
 
+/****** Join Form ********/
+#countryError {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+#countryInput:invalid {
+    border-color: #dc3545
+}
+
+#countryInput:valid {
+    border-color: #28a745
+}
+
 /* Footer section */
 
 .footer{

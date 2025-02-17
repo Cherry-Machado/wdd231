@@ -390,9 +390,14 @@ select {
     border-radius: 8px;
 }
 /* Contact Form */
+.contact-page {
+    padding: 1rem 3rem 0rem;
+
+}
 .contact {
+    margin-top: 0;
     min-height: 600px;
-    height: 100vh;
+    /* height: 100vh; */
     display: grid;
     grid-template-columns: var(--contact-columns);
     grid-template-rows: var(--contact-rows);
@@ -404,6 +409,8 @@ select {
     display: flex;
     align-items: center;
     position: relative;
+    margin-top: 0;
+    
 }
 
 .contact__picture::before {
@@ -414,7 +421,7 @@ select {
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--color-primary);
+    background: var(--color-secondary);
     z-index: -1;
     clip-path: var(--clip);
 }
@@ -434,6 +441,7 @@ select {
 
 .contact__title {
     font-size: 3rem;
+    color: var(--color-primary);
 }
 
 .contact__title::after {
@@ -441,7 +449,7 @@ select {
     display: block;
     width: 80px;
     height: 4px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     margin-top: 10px;
 }
 
@@ -461,7 +469,7 @@ select {
 
 .contact__cta {
     display: block;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     width: 12rem;
     color: #fff;
     font-family:'Inter', sans-serif;
@@ -469,6 +477,7 @@ select {
     outline: none;
     border-radius: 6px;
     font-weight: 700;
+    margin-bottom: 2rem;
     box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5) 
 }
 
@@ -637,6 +646,38 @@ select {
 
     .footer__texts{
         width: 100%;
+    }
+
+    :root {
+        --contact-columns: 1fr;
+        --contact-rows: max-content 1fr;
+        --clip: polygon(0 0, 0% 100%, 100% 0);
+    }
+
+    .contact-page {
+        padding: 1rem 2.5rem 0rem;
+    
+    }
+
+    .contact__form {
+        grid-column:  1/-1;
+        grid-row: 2/3;
+        padding: 2.5rem 0 2.5rem;
+        width: 90%;
+        max-width: 31.25rem;
+        padding-top: 0;
+    }
+
+    .contact__picture {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        justify-content: center;
+        padding: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    .contact__img {
+        max-width: 25rem;
     }
 }
 

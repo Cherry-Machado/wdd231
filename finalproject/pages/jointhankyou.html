@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYTBookHub - Join Page</title>
+    <title>NYTBookHub - Contact Page</title>
     <meta name="description"
         content="WDD 231 - Web Frontend Development I | Cherry Machado | This is my final Project NYTBookHub.">
     <meta name="author" content="Cherry Machado">
@@ -45,7 +45,7 @@
                         <li><a href="../index.html" class="nav__link">Home</a></li>
                         <li><a href="./about.html" class="nav__link">About Us</a></li>
                         <li><a href="./contact.html" class="nav__link">Contact</a></li>
-                        <li class="current-menu-item"><a href="join.html" class="nav__link">Join Us</a></li>
+                        <li class="current-menu-item"><a href="./join.html" class="nav__link">Join Us</a></li>
                     </ul>
                 </nav>
             </section>
@@ -59,37 +59,12 @@
                     loading="lazy">
             </figure>
 
-            <form class="contact__form" method="get" action="jointhankyou.html">
-                <h2 class="contact__title">Together, we can achive more!</h2>
-                <label>First Name:
-                    <input type="text" name="first" title="Enter your first name" autocomplete="given-name" class="contact__input" required>
-                </label>
-                <label>Last Name:
-                    <input type="text" name="last" title="Enter your last name" autocomplete="family-name" class="contact__input" required>
-                </label>
-                <label><span class="label-text">Enter your Email:</span>
-                    <input type="email" name="email" title="Enter your email address" placeholder="Email Address"
-                        class="contact__input" required>
-                </label>
-                <label><span class="label-text">Country:</span>
-                    <input type="text" id="countryInput" name="country" title="Enter your Country" placeholder="Start typing your country..."
-                        class="contact__input" list="countryList" autocomplete="off" required>
-                    <datalist id="countryList"></datalist>
-                    <input type="hidden" id="countryCode" name="country_code">
-                </label>
-                <label>Mobile Phone:
-                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" placeholder="+5511964983941">
-                </label>
-                <label>Business/Organization Name:
-                    <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
-                </label>
-                <label><span class="label-text">Write your Message:</span>
-                    <textarea name="Message" placeholder="Message..."
-                        class="contact__input contact__input--area"></textarea>
-                </label>
-                <input type="hidden" name="timestamp" id="timestamp" value="">
-                <button type="submit" class="contact__cta">Join us now!</button>
-            </form>
+            <article class="contact__form">
+                <h1 class="contact__title">Welcome Aboard!</h1>
+                <p>Thank you for joining the NYTBooksHub community. We're thrilled to have you on board! </p>
+                <p>In the meantime, feel free to explore more about our services or check out our latest updates. If you have any urgent questions, don't hesitate to reach out directly at <span class="highlight">cherry5467@gmail.com</span>.</p>
+                <a href="../index.html" class="contact__cta">Back to Home</a>
+            </article>
         </section>
     </main>
 

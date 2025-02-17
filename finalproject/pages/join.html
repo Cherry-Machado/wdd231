@@ -59,14 +59,28 @@
             </figure>
 
             <form class="contact__form" action="https://formsubmit.co/048862113742524d461ac9e269ddb0c5" method="POST">
-                <h2 class="contact__title">We keep in touch</h2>
-                <label><span class="label-text">Enter your Name:</span>
-                    <input type="text" name="name" title="Enter your Name" placeholder="Ex: Jhon Wyne"
-                        autocomplete="name" class="contact__input" required>
+                <h2 class="contact__title">Together, we can achive more!</h2>
+                <label>First Name:
+                    <input type="text" name="first" title="Enter your first name" autocomplete="given-name" class="contact__input" required>
+                </label>
+                <label>Last Name:
+                    <input type="text" name="last" title="Enter your last name" autocomplete="family-name" class="contact__input" required>
                 </label>
                 <label><span class="label-text">Enter your Email:</span>
                     <input type="email" name="email" title="Enter your email address" placeholder="Email Address"
                         class="contact__input" required>
+                </label>
+                <label><span class="label-text">Country:</span>
+                    <input type="text" id="countryInput" name="country" title="Enter your Country" placeholder="Start typing your country..."
+                        class="contact__input" list="countryList" autocomplete="off" required>
+                    <datalist id="countryList"></datalist>
+                    <input type="hidden" id="countryCode" name="country_code">
+                </label>
+                <label>Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" placeholder="+5511964983941">
+                </label>
+                <label>Business/Organization Name:
+                    <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
                 </label>
                 <label><span class="label-text">Write your Message:</span>
                     <textarea name="Message" placeholder="Message..."

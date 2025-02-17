@@ -526,6 +526,10 @@ textarea:valid{border-left-color: green;}
     width: 50%;
 }
 
+.footer__texts a {
+    color red;
+}
+
 .footer__icon{
     display: inline-block;
     font-size: 2rem;

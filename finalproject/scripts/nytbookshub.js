@@ -52,7 +52,24 @@ document.addEventListener('DOMContentLoaded', function() {
         countryInput.setCustomValidity(isValid ? '' : 'Invalid country');
     });
 
-    
+    /*countryInput.addEventListener('input', () => {
+        const inputValue = countryInput.value.toLowerCase();
+        const found = countries.find(c => c.name.toLowerCase() === inputValue);
+        countryCodeInput.value = found ? found.code : '';
+    });*/
+
+    /*countryInput.addEventListener('input', function() {
+        const inputValue = this.value.toLowerCase();
+        const matchedCountry = countries.find(country => 
+            country.name.toLowerCase() === inputValue
+        );
+
+        // Update the hidden field with the country code
+        if (matchedCountry) {
+            countryCodeInput.value = matchedCountry.code;
+        } else {
+            countryCodeInput.value = '';
+        }*/
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -69,10 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
     
-            // If it's ok, send the form
-            countryError.style.display = 'none';
-            console.log('Submitting form with country:', selectedCountry);
-            form.submit();
+            
         });
+        // If it's ok, send the form
+        countryError.style.display = 'none';
+        console.log('Submitting form with country:', selectedCountry);
+        form.submit();
         
 });

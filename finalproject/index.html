@@ -22,8 +22,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/chamber.css">
     <link rel="icon" href="././images/favicon.ico" type="image/x-icon">
     <script type="module" src="./scripts/nytbookshub.js" defer></script>
 </head>
@@ -31,7 +29,9 @@
 <body>
 
     <header class="hero">
+        
         <nav class="nav">
+            <button id="myButton" title="menuLinksButton"></button>
             <section class="nav__container container">
                 <figure class="nav__logo">
                     <h2 class="nav__title">NYTBookHub</h2>
@@ -40,12 +40,14 @@
                     <h2>THE NEW YORK TIMES</h2>
                     <h3>Best Seller List</h3>
                 </figure>
-                <div class="nav__links">
-                    <a href="#about" class="nav__link">About Us</a>
-                    <a href="#" class="nav__link">Contact</a>
-                    <a href="#" class="nav__link">Join Us</a>
-
-                </div>
+                <nav class="nav__nav__hamburguer">
+                    <ul class="menuLinks">
+                        <li class="home-menu current-menu-item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="about-menu"><a href="./pages/about.html" class="nav__link">About Us</a></li>
+                        <li><a href="#" class="nav__link" >Contact</a></li>
+                        <li><a href="#" class="nav__link">Join Us</a></li>
+                    </ul>
+                </nav>
             </section>
         </nav>
         <section class="hero__main container">

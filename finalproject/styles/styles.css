@@ -88,6 +88,10 @@ body{
     flex-wrap: wrap;
 }
 
+.menuLinks {
+    display: flex;
+    list-style: none;
+}
 .nav__link {
     color: #fff;
     text-decoration: none;
@@ -95,6 +99,10 @@ body{
     padding: .5rem .7rem .8rem;
 }
 
+li.current-menu-item a {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* color: var(--white-bass-color); */
+}
 .nav__link:hover {
     background-color: var(--color-primary);
     font-weight: bold;
@@ -214,7 +222,8 @@ body{
     background-image: linear-gradient(to bottom, #fff 50%, #6C63FF 190%);
     height: 410px;
     box-shadow: var(--box-shadow);
-    border-radius: 10px; 
+    border-radius: 10px;
+    margin-bottom: 1rem; 
 }
 
  .bestbook__card:hover {
@@ -261,7 +270,12 @@ body{
     margin: 10px 0; */
     /* font-size: 1.2rem; */
     text-align: left;
-    color: #000000;
+   /* color: #000000;*/
+   
+    color: #4a4747;
+    background: #bababa;
+    text-shadow: #e0e0e0 1px 1px 0;
+    width: fit-content;
     margin: 0; 
 }
 
@@ -412,6 +426,10 @@ select {
     width: 90%;
 }
 
+#myButton {
+    display: none;
+}
+
 @media screen and (max-width: 68rem){
     .nav__container {
         flex-direction: column;
@@ -529,6 +547,10 @@ select {
         font-size: 2.2rem;
     }
 
+    .nav__container {
+        padding-bottom: 1rem;
+    }
+
     .about__texts{
         width: 100%;
     }
@@ -561,4 +583,74 @@ select {
         max-width: 330px;
         margin-bottom: 40px;
     }
+
+    .nav__nav__hamburguer {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: large;
+        background-color: var(--active-color-2);
+    }
+    
+    /* Navigation and Hamburger */
+    
+    #myButton {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--letter-color);
+        cursor: pointer;
+        width: 100%;
+        text-align: right;
+        padding: .25rem 2vw;
+        margin-top: -.5rem;
+    }
+    
+    #myButton::before {
+        position: absolute;
+        content: "\2630";
+        top: 10px;
+        right: 15px;
+    }
+    
+    
+    ul.menuLinks {
+        display: none;
+        list-style-type: none;
+        margin: 0;
+        text-align: center;
+     } 
+    
+    ul.menuLinks li a {
+        display: block;
+        padding: .75rem 5vw;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    li.current-menu-item a {
+        background-color: rgba(0, 0, 0, 0.2);
+        /* color: var(--white-bass-color); */
+    }
+    
+    #myButton.open::before {
+        content: "\2613";
+    }
+    
+    ul.menuLinks.open {
+        padding: 0;
+        display: block;
+        transition: transform 0.3s;
+    }
+
+    ul.menuLinks.open:hover {
+        transform: translateY(-5px);
+    }
+    
+    ul.menuLinks a:hover {
+        /* background-color: rgba(255, 255, 255, 0.3); */
+        font-size: 1.1rem;
+        letter-spacing: .03rem;
+    }
+    
 }

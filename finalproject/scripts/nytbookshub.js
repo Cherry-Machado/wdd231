@@ -24,10 +24,8 @@ async function initializeApp() {
 
 initializeApp();
 
-document.querySelector('form').addEventListener('submit', e => {
-	e.preventDefault()
-	const data = Object.fromEntries(
-	new FormData(e.target)
-  )
-  alert(JSON.stringify(data))
-})
+document.querySelector('.contact__cta').addEventListener('submit', e => {
+	e.preventDefault();
+	const data = Object.fromEntries(new FormData(e.target))
+    alert(JSON.stringify(data))
+});

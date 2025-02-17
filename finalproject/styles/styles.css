@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 *{
     /* outline:3px solid red; */
 }
@@ -432,6 +432,45 @@ select {
     gap: 2rem;
 }
 
+.contact__title {
+    font-size: 3rem;
+}
+
+.contact__title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary);
+    margin-top: 10px;
+}
+
+.contact__input{
+    padding: 1.1rem .6rem;
+    font-family:'Inter', sans-serif;
+    width: 100%;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.contact__input--area {
+    resize: none;
+    height: 10rem;
+}
+
+.contact__cta {
+    display: block;
+    background-color: var(--color-secondary);
+    width: 12rem;
+    color: #fff;
+    font-family:'Inter', sans-serif;
+    padding: 1.1rem 0;
+    outline: none;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5) 
+}
 
 /* Footer section */
 

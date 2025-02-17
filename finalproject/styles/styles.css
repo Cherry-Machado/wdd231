@@ -527,7 +527,7 @@ textarea:valid{border-left-color: green;}
 }
 
 .footer__texts a {
-    color red;
+    color: red;
 }
 
 .footer__icon{

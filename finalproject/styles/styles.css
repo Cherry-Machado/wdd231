@@ -23,6 +23,7 @@
 
 body{
     font-family: 'Lato', sans-serif;
+    
 }
 
 .container{
@@ -33,6 +34,15 @@ body{
     padding: var(--padding-container);
 }
 
+.container-about {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: var(--padding-container);
+}
+
+
 /* hero section */
 
 .hero{
@@ -40,6 +50,11 @@ body{
     height: 100vh;
     background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
 }
+
+.hero-about {
+    --padding-container: 0;
+}
+
 
 .hero__main{
     height: 100%;
@@ -155,6 +170,13 @@ li.current-menu-item a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 0;
+}
+
+main h1 {
+    color: var(--color-secondary);
+    padding: 1rem 3rem;
+    font-size:x-large;
 }
 
 .about__img{
@@ -376,6 +398,7 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 
 .footer__texts{

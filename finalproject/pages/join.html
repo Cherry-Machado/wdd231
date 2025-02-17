@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYTBookHub - Contact Page</title>
+    <title>NYTBookHub - Join Page</title>
     <meta name="description"
         content="WDD 231 - Web Frontend Development I | Cherry Machado | This is my final Project NYTBookHub.">
     <meta name="author" content="Cherry Machado">
@@ -43,27 +43,43 @@
                     <ul class="menuLinks">
                         <li><a href="../index.html" class="nav__link">Home</a></li>
                         <li><a href="./about.html" class="nav__link">About Us</a></li>
-                        <li class="current-menu-item"><a href="./contact.html" class="nav__link">Contact</a></li>
-                        <li><a href="./join.html" class="nav__link">Join Us</a></li>
+                        <li><a href="./contact.html" class="nav__link">Contact</a></li>
+                        <li class="current-menu-item"><a href="join.html" class="nav__link">Join Us</a></li>
                     </ul>
                 </nav>
             </section>
         </nav>
     </header>
     <main class="main">
-        <h1 class="contact-page">Contact</h1>
+        <h1 class="contact-page">Join Us</h1>
         <section class="contact">
             <figure class="contact__picture">
                 <img src="../images/undraw_reading-time_gcvc.svg" class="contact__img" alt="photo woman reading"
                     loading="lazy">
             </figure>
 
-            <article class="contact__form">
-                <h1 class="contact__title">Thank You for Reaching Out!</h1>
-                <p>We have successfully received your message and appreciate you taking the time to contact us. Our team will review your inquiry and get back to you as soon as possible.</p>
-                <p>In the meantime, feel free to explore more about our services or check out our latest updates. If you have any urgent questions, don't hesitate to reach out directly at <span class="highlight">cherry5467@gmail.com</span>.</p>
-                <a href="../index.html" class="contact__cta">Back to Home</a>
-            </article>
+            <form class="contact__form" action="https://formsubmit.co/048862113742524d461ac9e269ddb0c5" method="POST">
+                <h2 class="contact__title">We keep in touch</h2>
+                <label><span class="label-text">Enter your Name:</span>
+                    <input type="text" name="name" title="Enter your Name" placeholder="Ex: Jhon Wyne"
+                        autocomplete="name" class="contact__input" required>
+                </label>
+                <label><span class="label-text">Enter your Email:</span>
+                    <input type="email" name="email" title="Enter your email address" placeholder="Email Address"
+                        class="contact__input" required>
+                </label>
+                <label><span class="label-text">Write your Message:</span>
+                    <textarea name="Message" placeholder="Message..."
+                        class="contact__input contact__input--area"></textarea>
+                </label>
+                <button type="submit" class="contact__cta">Contact us now!</button>
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New submission!">
+                <input type="hidden" name="_autoresponse" value="Thanks for contact NYTBooksHub!">
+                <input type="hidden" name="_next"
+                    value="https://cherry-machado.github.io/wdd231/finalproject/pages/contactthanks.html">
+            </form>
         </section>
     </main>
 

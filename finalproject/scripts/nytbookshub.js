@@ -94,3 +94,38 @@ document.addEventListener('DOMContentLoaded', function () {
         form.submit();
     });
 });
+
+// Function to calculate the difference in days between two dates
+function getDaysBetweenDates(date1, date2) {
+    const msPerDay = 86400000; // Milliseconds in a day
+    return Math.floor((date2 - date1) / msPerDay);
+}
+
+// Function to display the last visit message
+function displayLastVisitMessage() {
+    const lastVisit = localStorage.getItem('lastVisit');
+    const currentDate = Date.now();
+    const messageContainer = document.querySelector('.last-visit-message');
+
+    if (!lastVisit) {
+        // First visit
+        messageContainer.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        const daysSinceLastVisit = getDaysBetweenDates(Number(lastVisit), currentDate);
+        if (daysSinceLastVisit < 1) {
+            messageContainer.textContent = "Back so soon! Awesome!";
+        } else {
+            messageContainer.textContent = `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago.`;
+        }
+    }
+
+    // Insert the message next to the <h1 class="discover-page">Discover Page</h1>
+    const discoverPageTitle = document.querySelector('.discover-page');
+    discoverPageTitle.insertAdjacentElement('afterend', messageContainer);
+
+    // Update the last visit date in localStorage
+    localStorage.setItem('lastVisit', currentDate.toString());
+}
+
+// Call the functions
+displayLastVisitMessage();

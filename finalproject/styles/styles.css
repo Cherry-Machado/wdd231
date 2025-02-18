@@ -34,13 +34,13 @@ body{
     position: relative;
 }
 
-.main__page {
+.main__page h1 {
     padding: 0;
     margin: 0;
     position: absolute;
     z-index: 1;
-    top: .6rem;
-    left: 1rem;
+    top: 1rem;
+    left: 3.5rem;
     color: #fff;
 }
 

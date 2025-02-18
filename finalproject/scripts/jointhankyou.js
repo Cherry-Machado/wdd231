@@ -12,13 +12,15 @@ function validateEmail(email) {
   
   // Grab the entire URL for this page including the attached GET values
   const currentUrl = window.location.href;
-  console.log(currentUrl);
+  
   
   // Divide the URL into two halves
   const everything = currentUrl.split("?");
+  console.log(everything);
   
   // Grab just the second half
   let formData = everything[1].split("&");
+  console.log(formData);
   
   // Function to extract and format form data
   function show(cup) {
@@ -28,6 +30,7 @@ function validateEmail(email) {
             result = decodeURIComponent(element.split("=")[1].replace(/\+/g, " ")); // Decode URL-encoded values
         }
     });
+    console.log('Este es el valor total de result: ', result);
     return result;
   }
   
@@ -52,6 +55,7 @@ function validateEmail(email) {
   document.getElementById('phone').textContent = show("phone");
   document.getElementById('organization').textContent = show("organization");
   document.getElementById('timestamp').textContent = formatDate(show("timestamp"));
+  console.log("Country:", show("country"));
   
   // Add event listener for the return button
   document.querySelector('.contact__cta').addEventListener('click', () => {

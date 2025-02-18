@@ -721,10 +721,10 @@ textarea:valid {
 }
 
 .footer__nav a:hover {
-    -moz-transform: scale(130%);
-    -wekit-transform: scale(130%);
-    -o-transform: scale(130%);
-    transform: scale(130%);
+    -moz-transform: scale(1.5);
+    -wekit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 #myButton {

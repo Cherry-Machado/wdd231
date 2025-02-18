@@ -4,7 +4,7 @@ import { initializeBuyOptions } from './buybestbooks.js';
 import countries from './countries.js';
 
 
-displayLastVisitMessage();
+
 // hamburguerElement.addEventListener("click") callback
 const hamburguerElement = document.querySelector("#myButton");
 const navElement = document.querySelector(".menuLinks");
@@ -130,4 +130,4 @@ function displayLastVisitMessage() {
 }
 
 // Call the functions
-
+displayLastVisitMessage();

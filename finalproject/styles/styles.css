@@ -476,7 +476,7 @@ select {
     left: 0;
     background: var(--color-secondary);
     z-index: -1;
-    clip-path: var(--clip);
+     clip-path: var(--clip); 
 }
 
 .contact__img {

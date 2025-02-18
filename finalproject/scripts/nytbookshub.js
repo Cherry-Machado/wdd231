@@ -120,7 +120,7 @@ function displayLastVisitMessage() {
     }
 
     // Insert the message next to the <h1 class="discover-page">Discover Page</h1>
-    const discoverPageTitle = document.querySelector('.discover-page');
+    const discoverPageTitle = document.querySelector('.main__page');
     discoverPageTitle.insertAdjacentElement('afterend', messageContainer);
 
     // Update the last visit date in localStorage
